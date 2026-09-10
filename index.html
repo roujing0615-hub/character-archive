@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星汐｜此微夢</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    background: #07060d;
+  }
+    .cover {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+    }
+    .cover img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+    }
+    .background { z-index: 1; }
+.shards    { z-index: 2; }
+.emblem    { z-index: 3; }
+.logo      { z-index: 4; }
+.frame     { z-index: 5; }
+  </style>
+</head>
+
+<body>
+  <main class="cover">
+    <img class="background" src="images/home/background.png" alt="">
+    <img class="shards" src="images/home/shards.png" alt="">
+    <img class="emblem" src="images/home/emblem.png" alt="">
+    <img class="logo" src="images/home/logo.png" alt="">
+    <img class="frame" src="images/home/frame.png" alt="">
+  </main>
+</body>
+
+</html>
