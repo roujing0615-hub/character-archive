@@ -38,46 +38,54 @@
 .emblem    { z-index: 3; }
 .logo      { z-index: 4; }
 .frame     { z-index: 5; }
-    .emblem,
+   .emblem,
 .logo {
   left: 50%;
   transform: translateX(-50%);
   height: auto;
 }
-    .shards {
-  animation: shards-float 8s ease-in-out infinite;
-    }
+
+.shards {
+  transform-origin: center center;
+  animation: shards-drift 16s ease-in-out infinite;
+}
+
+@keyframes shards-drift {
+  0%, 100% {
+    transform: rotate(-0.4deg);
+  }
+
+  50% {
+    transform: rotate(0.4deg);
+  }
+}
 
 .emblem {
   width: 68%;
   top: 12%;
-  animation: emblem-breathe 5s ease-in-out infinite;
+
 }
 
 .logo {
   width: 62%;
   top: 46%;
 }
-    @keyframes emblem-breathe {
+    
+  
+    .shards {
+  transform-origin: center center;
+  animation: shards-drift 16s ease-in-out infinite;
+}
+
+@keyframes shards-drift {
   0%, 100% {
-    filter: brightness(1);
-    scale: 1;
+    transform: rotate(-0.4deg);
   }
 
   50% {
-    filter: brightness(1.3);
-    scale: 1.025;
+    transform: rotate(0.4deg);
   }
 }
-    @keyframes shards-float {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(5px, -8px);
-  }
-    }
   
   </style>
 </head>
