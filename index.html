@@ -48,12 +48,22 @@
 .emblem {
   width: 68%;
   top: 12%;
+  animation: emblem-breathe 5s ease-in-out infinite;
 }
 
 .logo {
   width: 62%;
   top: 46%;
 }
+    @keyframes emblem-breathe {
+  0%, 100% {
+    filter: brightness(1);
+  }
+
+  50% {
+    filter: brightness(1.12);
+  }
+    }
   </style>
 </head>
 
