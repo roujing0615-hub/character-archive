@@ -67,7 +67,224 @@
     .enter:active {
       opacity: 0.5;
     }
+/* ===== 目錄上方｜CONTENTS HEADER ===== */
 
+.contents-header {
+  padding: 28px 22px 34px;
+  color: #3f3544;
+}
+
+
+/* ----- 頂部導覽 ----- */
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-title {
+  font-family: "Noto Serif TC", serif;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: 3px;
+}
+
+.brand-side {
+  padding-top: 2px;
+}
+
+.brand-en {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 5px;
+}
+
+.brand-tagline {
+  margin-top: 4px;
+  font-family: Georgia, serif;
+  font-size: 7px;
+  font-style: italic;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  font-family: Georgia, serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav-links span {
+  opacity: 0.4;
+}
+
+
+/* ----- 上方細線 ----- */
+
+.header-divider,
+.title-decoration {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-divider {
+  margin-top: 16px;
+}
+
+.header-divider span,
+.title-decoration span {
+  height: 1px;
+  flex: 1;
+  background: rgba(151, 119, 91, 0.42);
+}
+
+.header-divider b,
+.title-decoration b {
+  font-size: 11px;
+  font-weight: normal;
+  color: #a98664;
+}
+
+
+/* ----- 主標題 ----- */
+
+.contents-title-wrap {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.contents-title {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 52px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.star-o {
+  display: inline-block;
+  font-size: 25px;
+  transform: translateY(-5px);
+  margin: 0 3px;
+}
+
+.contents-cn {
+  margin-top: 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.contents-cn span {
+  width: 70px;
+  height: 1px;
+  background: rgba(97, 77, 84, 0.35);
+}
+
+.contents-cn strong {
+  font-family: "Noto Serif TC", serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.contents-quote {
+  margin: 18px 0 0;
+
+  font-family: "Noto Serif TC", serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.contents-en {
+  margin: 7px 0 0;
+
+  font-family: Georgia, serif;
+  font-size: 7px;
+  letter-spacing: 2px;
+  opacity: 0.65;
+}
+
+.title-decoration {
+  width: 62%;
+  margin: 17px auto 0;
+}
+
+
+/* ----- 手機版 ----- */
+
+@media (max-width: 650px) {
+
+  .contents-header {
+    padding: 22px 16px 28px;
+  }
+
+  .top-nav {
+    gap: 10px;
+  }
+
+  .brand-title {
+    font-size: 30px;
+  }
+
+  .brand-en {
+    font-size: 9px;
+    letter-spacing: 3px;
+  }
+
+  .brand-tagline {
+    font-size: 6px;
+  }
+
+  .nav-links {
+    font-size: 6px;
+    letter-spacing: 1px;
+    gap: 4px;
+  }
+
+  .contents-title {
+    font-size: 43px;
+  }
+
+  .star-o {
+    font-size: 21px;
+  }
+
+  .contents-cn strong {
+    font-size: 21px;
+  }
+
+  .contents-cn span {
+    width: 50px;
+  }
+
+  .title-decoration {
+    width: 78%;
+  }
+
+}
     /* 第二畫面｜目錄 */
     #world-page {
       display: none;
@@ -144,7 +361,7 @@
     /* 館藏排列 */
     .collection-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
 
@@ -330,16 +547,68 @@
           <span class="collection-enter">ENTER →</span>
         </article>
 
+<!-- ===== 目錄上方｜CONTENTS HEADER ===== -->
 
-        <article class="collection">
-          <span class="collection-number">05</span>
-          <div class="collection-mark">◇</div>
-          <h2>館藏名稱</h2>
-          <p>故事收藏</p>
-          <span class="collection-enter">ENTER →</span>
-        </article>
+<section class="contents-header">
 
+  <div class="top-nav">
+    <div class="brand">
+      <div class="brand-title">星汐</div>
+
+      <div class="brand-side">
+        <div class="brand-en">SEKI</div>
+        <div class="brand-tagline">Stories live beyond an end.</div>
       </div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">HOME</a>
+      <span>|</span>
+      <a href="#">CONTENTS</a>
+      <span>|</span>
+      <a href="#">ABOUT</a>
+      <span>|</span>
+      <a href="#">EXTRA</a>
+    </nav>
+  </div>
+
+
+  <div class="header-divider">
+    <span></span>
+    <b>✦</b>
+    <span></span>
+  </div>
+
+
+  <div class="contents-title-wrap">
+
+    <h1 class="contents-title">
+      C<span class="star-o">✦</span>NTENTS
+    </h1>
+
+    <div class="contents-cn">
+      <span></span>
+      <strong>目錄</strong>
+      <span></span>
+    </div>
+
+    <p class="contents-quote">
+      「不同的世界，同一片星空。」
+    </p>
+
+    <p class="contents-en">
+      DIFFERENT WORLDS, THE SAME STARLIGHT.
+    </p>
+
+    <div class="title-decoration">
+      <span></span>
+      <b>✦</b>
+      <span></span>
+    </div>
+
+  </div>
+
+</section>
 
 
       <div class="back" onclick="backHome()">
