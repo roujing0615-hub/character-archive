@@ -120,6 +120,1067 @@
     }
 
 
+    /* ----- ENTER 透明點擊區 ----- */
+
+    .enter-area {
+      position: absolute;
+      z-index: 6;
+
+      left: 50%;
+      top: 63%;
+      transform: translateX(-50%);
+
+      width: 72%;
+      height: 22%;
+
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .enter-area:active {
+      opacity: 0.8;
+    }
+
+
+
+    /* ==================================================
+       總目錄｜CONTENTS
+    ================================================== */
+
+    #world-page {
+      display: none;
+
+      position: relative;
+
+      width: 100%;
+      min-height: 100vh;
+
+      color: #5f5868;
+
+      background-color: #f5f0ed;
+
+      background-image:
+        url("images/home/contents-bg.png");
+
+      background-position: center top;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      padding:
+        34px 18px 46px;
+    }
+
+
+
+    /* ==================================================
+       目錄上方｜CONTENTS HEADER
+    ================================================== */
+
+    .contents-header {
+      width: 100%;
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      color: #3f3544;
+    }
+
+
+
+    /* ==================================================
+       頂部導覽｜TOP NAV
+    ================================================== */
+
+    .top-nav-shell {
+      position: relative;
+
+      width: 100%;
+
+      padding:
+        11px 12px;
+
+      background:
+        rgba(255, 252, 248, 0.42);
+
+      border:
+        1px solid rgba(169, 134, 100, 0.15);
+
+      box-shadow:
+        0 5px 18px rgba(87, 67, 91, 0.05);
+
+      backdrop-filter:
+        blur(4px);
+
+      -webkit-backdrop-filter:
+        blur(4px);
+    }
+
+
+    .top-nav {
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 12px;
+    }
+
+
+
+    /* ----- 左上品牌 ----- */
+
+    .brand {
+      display: flex;
+      align-items: center;
+
+      gap: 8px;
+
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      color: #44384a;
+
+      font-size: 27px;
+      line-height: 1;
+
+      letter-spacing: 3px;
+      white-space: nowrap;
+    }
+
+    .brand-side {
+      padding-top: 1px;
+    }
+
+    .brand-en {
+      font-family: Georgia, serif;
+
+      color: #55475a;
+
+      font-size: 8px;
+      letter-spacing: 3px;
+    }
+
+    .brand-tagline {
+      margin-top: 3px;
+
+      font-family: Georgia, serif;
+
+      font-size: 5px;
+      font-style: italic;
+      letter-spacing: 0.8px;
+
+      opacity: 0.72;
+
+      white-space: nowrap;
+    }
+
+
+
+    /* ----- 右側導覽 ----- */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+
+      gap: 4px;
+
+      padding-right: 34px;
+
+      font-family: Georgia, serif;
+
+      color: #453949;
+
+      font-size: 6px;
+      letter-spacing: 0.9px;
+
+      white-space: nowrap;
+
+      text-shadow:
+        0 1px 4px rgba(255, 255, 255, 0.9);
+    }
+
+    .nav-links a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .nav-links span {
+      opacity: 0.38;
+    }
+
+
+
+    /* ----- 右上星盤 ----- */
+
+    .contents-compass {
+      position: absolute;
+
+      top: 50%;
+      right: 0;
+
+      transform: translateY(-50%);
+
+      width: 29px;
+      height: auto;
+
+      opacity: 0.9;
+    }
+
+
+
+    /* ----- 導覽下方細線 ----- */
+
+    .header-divider {
+      display: flex;
+      align-items: center;
+
+      gap: 9px;
+
+      margin-top: 13px;
+    }
+
+    .header-divider span {
+      flex: 1;
+
+      height: 1px;
+
+      background:
+        rgba(151, 119, 91, 0.48);
+    }
+
+    .header-divider b {
+      color: #a98664;
+
+      font-size: 10px;
+      font-weight: normal;
+    }
+
+
+
+    /* ==================================================
+       CONTENTS 標題 Logo
+    ================================================== */
+
+    .contents-title-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding:
+        24px 0 24px;
+    }
+
+    .contents-main-logo {
+      display: block;
+
+      width: min(84%, 500px);
+      height: auto;
+    }
+
+
+
+    /* ==================================================
+       館藏區｜COLLECTIONS
+    ================================================== */
+
+    .catalog {
+      width: 100%;
+      max-width: 760px;
+
+      margin: 0 auto;
+    }
+
+
+    /* ----- 館藏排列 ----- */
+
+    .collection-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(6, 1fr);
+
+      gap: 10px;
+    }
+
+
+
+    /* ----- 單張館藏卡 ----- */
+
+    .collection {
+      position: relative;
+
+      grid-column:
+        span 2;
+
+      min-height:
+        180px;
+
+      padding:
+        14px 8px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.72),
+          rgba(239, 231, 240, 0.70)
+        );
+
+      border:
+        1px solid rgba(165, 145, 167, 0.28);
+
+      box-shadow:
+        0 8px 20px rgba(82, 68, 90, 0.06);
+
+      cursor: pointer;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .collection:active {
+      transform:
+        scale(0.98);
+
+      box-shadow:
+        0 4px 12px rgba(82, 68, 90, 0.08);
+    }
+
+
+
+    /* ----- 第二排兩張置中 ----- */
+
+    .collection:nth-child(4) {
+      grid-column:
+        2 / span 2;
+    }
+
+    .collection:nth-child(5) {
+      grid-column:
+        4 / span 2;
+    }
+
+
+
+    /* ----- 編號 ----- */
+
+    .collection-number {
+      position: absolute;
+
+      top: 10px;
+      left: 12px;
+
+      font-family: Georgia, serif;
+
+      color: #b4a5b6;
+
+      font-size: 10px;
+      letter-spacing: 0.15em;
+    }
+
+
+
+    /* ----- 館藏圖片預留位置 ----- */
+
+    .collection-art {
+      width: 58%;
+
+      aspect-ratio:
+        1 / 1;
+
+      margin-bottom:
+        12px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #b79e7d;
+
+      font-size: 24px;
+    }
+
+
+
+    /* ----- 館名 ----- */
+
+    .collection h2 {
+      margin: 0;
+
+      color: #695e70;
+
+      font-size: 13px;
+      font-weight: 400;
+
+      letter-spacing: 0.12em;
+    }
+
+
+
+    /* ----- 分類 ----- */
+
+    .collection p {
+      margin:
+        8px 0 0;
+
+      color: #a094a3;
+
+      font-size: 8px;
+
+      letter-spacing: 0.08em;
+    }
+
+
+
+    /* ----- ENTER ----- */
+
+    .collection-enter {
+      margin-top:
+        14px;
+
+      color: #a48b6e;
+
+      font-family: Georgia, serif;
+
+      font-size: 8px;
+      letter-spacing: 0.2em;
+    }
+
+
+
+    /* ==================================================
+       BACK
+    ================================================== */
+
+    .back {
+      margin-top:
+        34px;
+
+      text-align:
+        center;
+
+      cursor:
+        pointer;
+
+      font-family:
+        Georgia, serif;
+
+      color:
+        #88798d;
+
+      font-size:
+        10px;
+
+      letter-spacing:
+        0.22em;
+
+      text-shadow:
+        0 1px 4px rgba(255, 255, 255, 0.85);
+    }
+
+    .back:active {
+      opacity:
+        0.5;
+    }
+
+
+
+    /* ==================================================
+       手機版｜MOBILE
+    ================================================== */
+
+    @media (max-width: 650px) {
+
+      #world-page {
+        padding:
+          38px 16px 42px;
+      }
+
+      .top-nav-shell {
+        padding:
+          10px 10px;
+      }
+
+      .brand-title {
+        font-size:
+          25px;
+      }
+
+      .brand-en {
+        font-size:
+          7px;
+
+        letter-spacing:
+          2px;
+      }
+
+      .brand-tagline {
+        font-size:
+          4.5px;
+      }
+
+      .nav-links {
+        gap:
+          3px;
+
+        padding-right:
+          31px;
+
+        font-size:
+          5px;
+
+        letter-spacing:
+          0.65px;
+      }
+
+      .contents-compass {
+        width:
+          26px;
+      }
+
+      .contents-title-wrap {
+        padding:
+          22px 0 23px;
+      }
+
+      .contents-main-logo {
+        width:
+          87%;
+      }
+
+    }
+
+
+
+    /* ==================================================
+       大螢幕｜DESKTOP
+    ================================================== */
+
+    @media (min-width: 700px) {
+
+      #world-page {
+        padding:
+          44px 30px 55px;
+      }
+
+      .top-nav-shell {
+        padding:
+          14px 16px;
+      }
+
+      .brand-title {
+        font-size:
+          34px;
+      }
+
+      .brand-en {
+        font-size:
+          10px;
+      }
+
+      .brand-tagline {
+        font-size:
+          7px;
+      }
+
+      .nav-links {
+        padding-right:
+          58px;
+
+        font-size:
+          8px;
+      }
+
+      .contents-compass {
+        width:
+          46px;
+      }
+
+      .collection {
+        min-height:
+          240px;
+      }
+
+      .collection h2 {
+        font-size:
+          15px;
+      }
+
+      .collection p {
+        font-size:
+          9px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ==================================================
+       封面｜COVER
+  ================================================== -->
+
+  <main id="cover-page">
+
+    <img
+      class="background"
+      src="images/home/background.png"
+      alt=""
+    >
+
+    <img
+      class="shards"
+      src="images/home/shards.png"
+      alt=""
+    >
+
+    <img
+      class="emblem"
+      src="images/home/emblem.png"
+      alt=""
+    >
+
+    <img
+      class="logo"
+      src="images/home/logo.png"
+      alt="星汐"
+    >
+
+
+    <!-- ENTER｜透明點擊區 -->
+
+    <div
+      class="enter-area"
+      onclick="enterWorld()"
+      aria-label="進入目錄"
+    ></div>
+
+
+    <img
+      class="frame"
+      src="images/home/frame.png"
+      alt=""
+    >
+
+  </main>
+
+
+
+  <!-- ==================================================
+       總目錄｜CONTENTS
+  ================================================== -->
+
+  <section id="world-page">
+
+
+    <!-- ==================================================
+         目錄上方｜CONTENTS HEADER
+    ================================================== -->
+
+    <header class="contents-header">
+
+
+      <!-- 頂部導覽閱讀層 -->
+
+      <div class="top-nav-shell">
+
+        <div class="top-nav">
+
+
+          <!-- 星汐品牌 -->
+
+          <div class="brand">
+
+            <div class="brand-title">
+              星汐
+            </div>
+
+            <div class="brand-side">
+
+              <div class="brand-en">
+                SEKI
+              </div>
+
+              <div class="brand-tagline">
+                Stories live beyond an end.
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- 導覽 -->
+
+          <nav class="nav-links">
+
+            <a
+              href="#"
+              onclick="backHome(); return false;"
+            >
+              HOME
+            </a>
+
+            <span>|</span>
+
+            <a
+              href="#"
+              onclick="return false;"
+            >
+              CONTENTS
+            </a>
+
+            <span>|</span>
+
+            <a
+              href="#"
+              onclick="return false;"
+            >
+              ABOUT
+            </a>
+
+            <span>|</span>
+
+            <a
+              href="#"
+              onclick="return false;"
+            >
+              EXTRA
+            </a>
+
+          </nav>
+
+
+
+          <!-- 星盤 -->
+
+          <img
+            class="contents-compass"
+            src="images/home/contents-compass.png"
+            alt=""
+          >
+
+        </div>
+
+      </div>
+
+
+
+      <!-- 導覽下方細線 -->
+
+      <div class="header-divider">
+
+        <span></span>
+
+        <b>✦</b>
+
+        <span></span>
+
+      </div>
+
+
+
+      <!-- CONTENTS 主標題 Logo -->
+
+      <div class="contents-title-wrap">
+
+        <img
+          class="contents-main-logo"
+          src="images/home/contents-logo.png"
+          alt="CONTENTS 目錄"
+        >
+
+      </div>
+
+
+    </header>
+
+
+
+    <!-- ==================================================
+         五大館藏｜COLLECTIONS
+    ================================================== -->
+
+    <div class="catalog">
+
+
+      <div class="collection-grid">
+
+
+
+        <!-- 01｜沉星之岸 -->
+
+        <article class="collection">
+
+          <span class="collection-number">
+            01
+          </span>
+
+          <div class="collection-art">
+            ◇
+          </div>
+
+          <h2>
+            沉星之岸
+          </h2>
+
+          <p>
+            十三號當舖 × 冥界
+          </p>
+
+          <span class="collection-enter">
+            ENTER →
+          </span>
+
+        </article>
+
+
+
+        <!-- 02｜群星秘儀 -->
+
+        <article class="collection">
+
+          <span class="collection-number">
+            02
+          </span>
+
+          <div class="collection-art">
+            ◇
+          </div>
+
+          <h2>
+            群星秘儀
+          </h2>
+
+          <p>
+            架空世界 × 魔法奇幻
+          </p>
+
+          <span class="collection-enter">
+            ENTER →
+          </span>
+
+        </article>
+
+
+
+        <!-- 03｜霓光異夢 -->
+
+        <article class="collection">
+
+          <span class="collection-number">
+            03
+          </span>
+
+          <div class="collection-art">
+            ◇
+          </div>
+
+          <h2>
+            霓光異夢
+          </h2>
+
+          <p>
+            現代都市 × 奇幻
+          </p>
+
+          <span class="collection-enter">
+            ENTER →
+          </span>
+
+        </article>
+
+
+
+        <!-- 04｜流光異聞 -->
+
+        <article class="collection">
+
+          <span class="collection-number">
+            04
+          </span>
+
+          <div class="collection-art">
+            ◇
+          </div>
+
+          <h2>
+            流光異聞
+          </h2>
+
+          <p>
+            東方 × 古今幻想
+          </p>
+
+          <span class="collection-enter">
+            ENTER →
+          </span>
+
+        </article>
+
+
+
+        <!-- 05｜微光日常 -->
+
+        <article class="collection">
+
+          <span class="collection-number">
+            05
+          </span>
+
+          <div class="collection-art">
+            ◇
+          </div>
+
+          <h2>
+            微光日常
+          </h2>
+
+          <p>
+            現代都市 × 人物故事
+          </p>
+
+          <span class="collection-enter">
+            ENTER →
+          </span>
+
+        </article>
+
+
+      </div>
+
+
+
+      <!-- BACK -->
+
+      <div
+        class="back"
+        onclick="backHome()"
+      >
+        ← BACK
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- ==================================================
+       頁面切換｜PAGE SWITCH
+  ================================================== -->
+
+  <script>
+
+    function enterWorld() {
+
+      document
+        .getElementById("cover-page")
+        .style.display = "none";
+
+      document
+        .getElementById("world-page")
+        .style.display = "block";
+
+      window.scrollTo(0, 0);
+
+    }
+
+
+    function backHome() {
+
+      document
+        .getElementById("world-page")
+        .style.display = "none";
+
+      document
+        .getElementById("cover-page")
+        .style.display = "block";
+
+      window.scrollTo(0, 0);
+
+    }
+
+  </script>
+
+
+</body>
+
+</html>
+    .shards {
+      z-index: 2;
+    }
+
+    .emblem {
+      z-index: 3;
+    }
+
+    .logo {
+      z-index: 4;
+    }
+
+    .frame {
+      z-index: 5;
+    }
+
+    .emblem,
+    .logo {
+      left: 50%;
+      transform: translateX(-50%);
+      height: auto;
+    }
+
+
+    /* ----- 碎片微動 ----- */
+
+    .shards {
+      transform-origin: center center;
+      animation: shards-drift 16s ease-in-out infinite;
+    }
+
+    @keyframes shards-drift {
+
+      0%,
+      100% {
+        transform: rotate(-0.4deg);
+      }
+
+      50% {
+        transform: rotate(0.4deg);
+      }
+
+    }
+
+
+    /* ----- 封面主圖位置 ----- */
+
+    .emblem {
+      width: 68%;
+      top: 12%;
+    }
+
+    .logo {
+      width: 62%;
+      top: 46%;
+    }
+
+
     /* ----- ENTER ----- */
 
     .enter-area {
