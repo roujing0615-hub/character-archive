@@ -508,6 +508,7 @@ margin-top: 18px;
     /* ----- 館藏圖片預留位置 ----- */
 
     .collection-art {
+      position: relative;
       width: 90%;
 
       aspect-ratio:
@@ -530,7 +531,15 @@ margin-top: 18px;
   object-fit: cover;
   display: block;
 }
+.collection-info {
+  position: absolute;
 
+  left: 10%;
+  right: 10%;
+  bottom: 8%;
+
+  text-align: center;
+}
 
     /* ----- 館名 ----- */
 
@@ -952,30 +961,25 @@ margin-top: 18px;
 
         <!-- 01｜沉星之岸 -->
 
-        <article class="collection">
+      <article class="collection">
 
-          <span class="collection-number">
-            01
-          </span>
+  <div class="collection-art">
+    <img src="images/home/contents-01.png" alt="">
 
-          <div class="collection-art">
-  <img src="images/home/contents-01.png" alt="">
-          </div>
+    <div class="collection-info">
+      <h2>沉星之岸</h2>
 
-          <h2>
-            沉星之岸
-          </h2>
+      <p>
+        十三號當舖 × 冥界
+      </p>
 
-          <p>
-            十三號當舖 × 冥界
-          </p>
+      <span class="collection-enter">
+        ENTER →
+      </span>
+    </div>
+  </div>
 
-          <span class="collection-enter">
-            ENTER →
-          </span>
-
-        </article>
-
+      </article>
 
 
         <!-- 02｜群星秘儀 -->
