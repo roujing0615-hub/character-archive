@@ -131,7 +131,10 @@
       transform: translateX(-50%);
 
       width: 72%;
-      height: 10%;
+padding: 10px 0;
+text-align: center;
+
+color: #eadfc9;
 
       cursor: pointer;
       -webkit-tap-highlight-color: transparent;
@@ -140,6 +143,19 @@
     .enter-area:active {
       opacity: 0.8;
     }
+    .enter-line {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  opacity: 0.82;
+}
+
+.enter-word {
+  margin-top: 10px;
+  font-family: Georgia, serif;
+  font-size: 10px;
+  letter-spacing: 0.45em;
+  opacity: 0.68;
+}
 
 
 
@@ -759,14 +775,21 @@
       alt="星汐"
     >
 
+<!-- ENTER｜封面入口 -->
 
-    <!-- ENTER｜透明點擊區 -->
+<div
+  class="enter-area"
+  onclick="enterWorld()"
+  aria-label="進入目錄"
+>
+  <div class="enter-line">
+    拾起一片星光，走入此微夢。
+  </div>
 
-    <div
-      class="enter-area"
-      onclick="enterWorld()"
-      aria-label="進入目錄"
-    ></div>
+  <div class="enter-word">
+    ENTER
+  </div>
+</div>
 
 
     <img
