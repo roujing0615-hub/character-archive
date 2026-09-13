@@ -1178,6 +1178,134 @@
 
   color: rgba(88, 62, 94, 0.06);
 }
+    /* ==================================================
+   人物檔案｜CHARACTER FILE
+================================================== */
+
+/* ----- 整張人物檔案 ----- */
+
+.profile-card {
+  position: relative;
+
+  margin-top: 28px;
+  padding: 10px 28px 26px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(252, 249, 245, 0.72),
+      rgba(245, 239, 246, 0.48)
+    );
+
+  border-top:
+    1px solid rgba(115, 86, 118, 0.18);
+
+  border-bottom:
+    1px solid rgba(115, 86, 118, 0.18);
+}
+
+
+/* ----- 淡淡的檔案編號 ----- */
+
+.profile-card::before {
+  content: "NO. 13";
+
+  display: block;
+
+  margin-bottom: 18px;
+
+  font-family: Georgia, serif;
+  font-size: 8px;
+
+  letter-spacing: 0.28em;
+
+  color: rgba(92, 67, 97, 0.55);
+}
+
+
+/* ----- 每一列 ----- */
+
+.profile-row {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 86px 1fr;
+
+  align-items: start;
+
+  padding: 16px 0;
+
+  border-bottom:
+    1px solid rgba(103, 80, 107, 0.10);
+}
+
+
+/* 最後一列不要底線 */
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+
+/* ----- 左側欄位名稱 ----- */
+
+.profile-label {
+  font-size: 10px;
+
+  letter-spacing: 0.14em;
+
+  color: rgba(93, 71, 98, 0.58);
+}
+
+
+/* ----- 右側資料 ----- */
+
+.profile-value {
+  font-size: 11px;
+  line-height: 1.9;
+
+  letter-spacing: 0.06em;
+
+  color: #493c4c;
+}
+
+
+/* ----- 右下角大型 13 水印 ----- */
+
+.profile-card::after {
+  content: "13";
+
+  position: absolute;
+
+  right: 18px;
+  bottom: 3px;
+
+  font-family: Georgia, serif;
+  font-size: 72px;
+  font-style: italic;
+
+  color: rgba(84, 58, 91, 0.035);
+
+  pointer-events: none;
+}
+
+
+/* ----- 手機 ----- */
+
+@media (max-width: 430px) {
+
+  .profile-card {
+    padding:
+      10px
+      24px
+      24px;
+  }
+
+  .profile-row {
+    grid-template-columns: 78px 1fr;
+  }
+
+}
   </style>
 
 </head>
@@ -1422,134 +1550,6 @@
         </div>
 
       </div>
-      /* ==================================================
-   人物檔案｜CHARACTER FILE
-================================================== */
-
-/* ----- 整張人物檔案 ----- */
-
-.profile-card {
-  position: relative;
-
-  margin-top: 28px;
-  padding: 10px 28px 26px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(252, 249, 245, 0.72),
-      rgba(245, 239, 246, 0.48)
-    );
-
-  border-top:
-    1px solid rgba(115, 86, 118, 0.18);
-
-  border-bottom:
-    1px solid rgba(115, 86, 118, 0.18);
-}
-
-
-/* ----- 淡淡的檔案編號 ----- */
-
-.profile-card::before {
-  content: "NO. 13";
-
-  display: block;
-
-  margin-bottom: 18px;
-
-  font-family: Georgia, serif;
-  font-size: 8px;
-
-  letter-spacing: 0.28em;
-
-  color: rgba(92, 67, 97, 0.55);
-}
-
-
-/* ----- 每一列 ----- */
-
-.profile-row {
-  position: relative;
-
-  display: grid;
-  grid-template-columns: 86px 1fr;
-
-  align-items: start;
-
-  padding: 16px 0;
-
-  border-bottom:
-    1px solid rgba(103, 80, 107, 0.10);
-}
-
-
-/* 最後一列不要底線 */
-
-.profile-row:last-child {
-  border-bottom: none;
-}
-
-
-/* ----- 左側欄位名稱 ----- */
-
-.profile-label {
-  font-size: 10px;
-
-  letter-spacing: 0.14em;
-
-  color: rgba(93, 71, 98, 0.58);
-}
-
-
-/* ----- 右側資料 ----- */
-
-.profile-value {
-  font-size: 11px;
-  line-height: 1.9;
-
-  letter-spacing: 0.06em;
-
-  color: #493c4c;
-}
-
-
-/* ----- 右下角大型 13 水印 ----- */
-
-.profile-card::after {
-  content: "13";
-
-  position: absolute;
-
-  right: 18px;
-  bottom: 3px;
-
-  font-family: Georgia, serif;
-  font-size: 72px;
-  font-style: italic;
-
-  color: rgba(84, 58, 91, 0.035);
-
-  pointer-events: none;
-}
-
-
-/* ----- 手機 ----- */
-
-@media (max-width: 430px) {
-
-  .profile-card {
-    padding:
-      10px
-      24px
-      24px;
-  }
-
-  .profile-row {
-    grid-template-columns: 78px 1fr;
-  }
-
-}
 
     </section>
 
