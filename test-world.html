@@ -3,617 +3,133 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>星汐｜目錄測試</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>綰胭｜星汐</title>
 
   <style>
+
+    /* ===== 基本設定｜SETUP ===== */
+
     * {
       box-sizing: border-box;
     }
 
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      min-height: 100%;
-      font-family: "Noto Serif TC", "PMingLiU", serif;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      background: #07060d;
-    }
-
-    /* 第一畫面｜測試封面 */
-    .page {
-      width: 100%;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
-    }
-
-    #cover-page {
-      background: #07060d;
-      color: #eadfc9;
-    }
-
-    .cover-title {
       margin: 0;
-      font-size: 42px;
-      font-weight: 400;
-      letter-spacing: 0.2em;
+      background: #f3eee8;
+      color: #352d39;
+      font-family:
+        "Noto Serif TC",
+        "Times New Roman",
+        serif;
     }
 
-    .cover-note {
-      margin-top: 16px;
-      opacity: 0.7;
-      font-size: 14px;
-      letter-spacing: 0.08em;
+    img {
+      display: block;
+      max-width: 100%;
     }
 
-    .enter {
-      margin-top: 32px;
-      padding: 14px 24px;
-      cursor: pointer;
-      letter-spacing: 0.35em;
-      font-size: 13px;
-      transition: opacity 0.25s ease;
-    }
 
-    .enter:active {
-      opacity: 0.5;
-    }
-/* ===== 目錄上方｜CONTENTS HEADER ===== */
+    /* ===== 綰胭頁面｜WANYAN PAGE ===== */
 
-.contents-header {
-  padding: 28px 22px 34px;
-  color: #3f3544;
-}
-
-
-/* ----- 頂部導覽 ----- */
-
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.brand-title {
-  font-family: "Noto Serif TC", serif;
-  font-size: 38px;
-  line-height: 1;
-  letter-spacing: 3px;
-}
-
-.brand-side {
-  padding-top: 2px;
-}
-
-.brand-en {
-  font-family: Georgia, serif;
-  font-size: 11px;
-  letter-spacing: 5px;
-}
-
-.brand-tagline {
-  margin-top: 4px;
-  font-family: Georgia, serif;
-  font-size: 7px;
-  font-style: italic;
-  letter-spacing: 1px;
-  opacity: 0.7;
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-
-  font-family: Georgia, serif;
-  font-size: 8px;
-  letter-spacing: 2px;
-}
-
-.nav-links a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.nav-links span {
-  opacity: 0.4;
-}
-
-
-/* ----- 上方細線 ----- */
-
-.header-divider,
-.title-decoration {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.header-divider {
-  margin-top: 16px;
-}
-
-.header-divider span,
-.title-decoration span {
-  height: 1px;
-  flex: 1;
-  background: rgba(151, 119, 91, 0.42);
-}
-
-.header-divider b,
-.title-decoration b {
-  font-size: 11px;
-  font-weight: normal;
-  color: #a98664;
-}
-
-
-/* ----- 主標題 ----- */
-
-.contents-title-wrap {
-  text-align: center;
-  padding-top: 30px;
-}
-
-.contents-title {
-  margin: 0;
-
-  font-family: Georgia, serif;
-  font-weight: 400;
-  font-size: 52px;
-  letter-spacing: 2px;
-  line-height: 1;
-}
-
-.star-o {
-  display: inline-block;
-  font-size: 25px;
-  transform: translateY(-5px);
-  margin: 0 3px;
-}
-
-.contents-cn {
-  margin-top: 18px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-.contents-cn span {
-  width: 70px;
-  height: 1px;
-  background: rgba(97, 77, 84, 0.35);
-}
-
-.contents-cn strong {
-  font-family: "Noto Serif TC", serif;
-  font-size: 24px;
-  font-weight: 400;
-  letter-spacing: 6px;
-}
-
-.contents-quote {
-  margin: 18px 0 0;
-
-  font-family: "Noto Serif TC", serif;
-  font-size: 11px;
-  letter-spacing: 3px;
-}
-
-.contents-en {
-  margin: 7px 0 0;
-
-  font-family: Georgia, serif;
-  font-size: 7px;
-  letter-spacing: 2px;
-  opacity: 0.65;
-}
-
-.title-decoration {
-  width: 62%;
-  margin: 17px auto 0;
-}
-
-
-/* ----- 手機版 ----- */
-
-@media (max-width: 650px) {
-
-  .contents-header {
-    padding: 22px 16px 28px;
-  }
-
-  .top-nav {
-    gap: 10px;
-  }
-
-  .brand-title {
-    font-size: 30px;
-  }
-
-  .brand-en {
-    font-size: 9px;
-    letter-spacing: 3px;
-  }
-
-  .brand-tagline {
-    font-size: 6px;
-  }
-
-  .nav-links {
-    font-size: 6px;
-    letter-spacing: 1px;
-    gap: 4px;
-  }
-
-  .contents-title {
-    font-size: 43px;
-  }
-
-  .star-o {
-    font-size: 21px;
-  }
-
-  .contents-cn strong {
-    font-size: 21px;
-  }
-
-  .contents-cn span {
-    width: 50px;
-  }
-
-  .title-decoration {
-    width: 78%;
-  }
-
-}
-    /* 第二畫面｜目錄 */
-    #world-page {
-      display: none;
-      width: 100%;
-      min-height: 100vh;
-      background:
-        linear-gradient(
-          rgba(248, 244, 239, 0.96),
-          rgba(239, 234, 241, 0.98)
-        );
-      color: #5f5868;
-      padding: 24px 18px 42px;
-    }
-
-    .catalog {
-      width: 100%;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .catalog-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 14px;
-      border-bottom: 1px solid rgba(126, 108, 133, 0.25);
-    }
-
-    .catalog-brand {
-      font-size: 18px;
-      letter-spacing: 0.18em;
-      color: #71677b;
-    }
-
-    .catalog-small {
-      font-size: 9px;
-      letter-spacing: 0.18em;
-      color: #a495a9;
-    }
-
-    .catalog-header {
-      text-align: center;
-      padding: 30px 0 26px;
-    }
-
-    .catalog-number {
-      font-size: 16px;
-      color: #b69b76;
-      margin-bottom: 8px;
-    }
-
-    .catalog-header h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: 400;
-      letter-spacing: 0.25em;
-      color: #756879;
-    }
-
-    .catalog-title {
-      margin-top: 6px;
-      font-size: 14px;
-      letter-spacing: 0.35em;
-      color: #8f8394;
-    }
-
-    .catalog-header p {
-      margin: 14px 0 0;
-      font-size: 12px;
-      line-height: 1.8;
-      color: #9a8f9e;
-    }
-
-    /* 館藏排列 */
-    .collection-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-    }
-
-    .collection {
-      min-height: 190px;
-      padding: 16px 14px;
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255, 255, 255, 0.72),
-          rgba(239, 231, 240, 0.72)
-        );
-      border: 1px solid rgba(165, 145, 167, 0.28);
-      box-shadow:
-        0 8px 20px rgba(82, 68, 90, 0.06);
+    .wanyan-page {
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      cursor: pointer;
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      width: 100%;
+      min-height: 100vh;
     }
 
-    .collection:active {
-      transform: scale(0.98);
-      box-shadow:
-        0 4px 12px rgba(82, 68, 90, 0.08);
-    }
 
-    .collection-number {
-      position: absolute;
-      top: 10px;
-      left: 12px;
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      color: #b4a5b6;
-    }
+    /* ===== 綰胭扉頁｜HERO ===== */
 
-    .collection-mark {
-      font-size: 25px;
-      color: #b79e7d;
-      margin-bottom: 12px;
-    }
 
-    .collection h2 {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 400;
-      letter-spacing: 0.12em;
-      color: #695e70;
-    }
+    /* ===== 關於綰胭｜ABOUT ===== */
 
-    .collection p {
-      margin: 8px 0 0;
-      font-size: 10px;
-      letter-spacing: 0.12em;
-      color: #a094a3;
-    }
 
-    .collection-enter {
-      margin-top: 16px;
-      font-size: 8px;
-      letter-spacing: 0.2em;
-      color: #a48b6e;
-    }
+    /* ===== 人物檔案｜PROFILE ===== */
 
-    /* 第五格置中 */
-    .collection:last-child {
-      grid-column: 1 / -1;
-      width: calc(50% - 7px);
-      justify-self: center;
-    }
 
-    .back {
-      margin-top: 30px;
-      text-align: center;
-      cursor: pointer;
-      font-size: 10px;
-      letter-spacing: 0.22em;
-      color: #998d9d;
-    }
+    /* ===== 故事｜STORY ===== */
 
-    .back:active {
-      opacity: 0.5;
-    }
 
-    @media (min-width: 700px) {
-      .collection-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    /* ===== 關係｜RELATION ===== */
 
-      .collection:last-child {
-        grid-column: auto;
-        width: 100%;
-      }
-    }
+
+    /* ===== 圖庫｜GALLERY ===== */
+
+
+    /* ===== 角色歌｜MUSIC ===== */
+
+
+    /* ===== 作者後記｜CREATOR NOTE ===== */
+
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- 第一畫面 -->
-  <section class="page" id="cover-page">
-
-    <h1 class="cover-title">星汐</h1>
-
-    <div class="cover-note">
-      這裡還是假裝自己是首頁的實驗鼠 🫠
-    </div>
-
-    <div class="enter" onclick="enterWorld()">
-      ENTER
-    </div>
-
-  </section>
+  <main class="wanyan-page">
 
 
-  <!-- 第二畫面 -->
-  <section id="world-page">
-    
-<!-- ===== 目錄上方｜CONTENTS HEADER ===== -->
+    <!-- ===== 綰胭扉頁｜HERO ===== -->
 
-<section class="contents-header">
-
-  <div class="top-nav">
-    <div class="brand">
-      <div class="brand-title">星汐</div>
-
-      <div class="brand-side">
-        <div class="brand-en">SEKI</div>
-        <div class="brand-tagline">Stories live beyond an end.</div>
-      </div>
-    </div>
-
-    <nav class="nav-links">
-      <a href="#">HOME</a>
-      <span>|</span>
-      <a href="#">CONTENTS</a>
-      <span>|</span>
-      <a href="#">ABOUT</a>
-      <span>|</span>
-      <a href="#">EXTRA</a>
-    </nav>
-  </div>
+    <section id="hero">
+    </section>
 
 
-  <div class="header-divider">
-    <span></span>
-    <b>✦</b>
-    <span></span>
-  </div>
+    <!-- ===== 關於綰胭｜ABOUT ===== -->
+
+    <section id="about">
+    </section>
 
 
-  <div class="contents-title-wrap">
+    <!-- ===== 人物檔案｜PROFILE ===== -->
 
-    <h1 class="contents-title">
-      C<span class="star-o">✦</span>NTENTS
-    </h1>
-
-    <div class="contents-cn">
-      <span></span>
-      <strong>目錄</strong>
-      <span></span>
-    </div>
-
-    <p class="contents-quote">
-      「不同的世界，同一片星空。」
-    </p>
-
-    <p class="contents-en">
-      DIFFERENT WORLDS, THE SAME STARLIGHT.
-    </p>
-
-    <div class="title-decoration">
-      <span></span>
-      <b>✦</b>
-      <span></span>
-    </div>
-
-  </div>
-
-    <div class="catalog">
-      <div class="collection-grid">
-
-        <article class="collection">
-          <span class="collection-number">01</span>
-          <div class="collection-mark">◇</div>
-          <h2>館藏名稱</h2>
-          <p>世界觀系列</p>
-          <span class="collection-enter">ENTER →</span>
-        </article>
+    <section id="profile">
+    </section>
 
 
-        <article class="collection">
-          <span class="collection-number">02</span>
-          <div class="collection-mark">◇</div>
-          <h2>館藏名稱</h2>
-          <p>世界觀系列</p>
-          <span class="collection-enter">ENTER →</span>
-        </article>
+    <!-- ===== 故事｜STORY ===== -->
+
+    <section id="story">
+    </section>
 
 
-        <article class="collection">
-          <span class="collection-number">03</span>
-          <div class="collection-mark">◇</div>
-          <h2>館藏名稱</h2>
-          <p>世界觀系列</p>
-          <span class="collection-enter">ENTER →</span>
-        </article>
+    <!-- ===== 關係｜RELATION ===== -->
+
+    <section id="relation">
+    </section>
 
 
-        <article class="collection">
-          <span class="collection-number">04</span>
-          <div class="collection-mark">◇</div>
-          <h2>現代都市</h2>
-          <p>故事收藏</p>
-          <span class="collection-enter">ENTER →</span>
-        </article>
+    <!-- ===== 圖庫｜GALLERY ===== -->
+
+    <section id="gallery">
+    </section>
 
 
-</section>
+    <!-- ===== 角色歌｜MUSIC ===== -->
+
+    <section id="music">
+    </section>
 
 
-      <div class="back" onclick="backHome()">
-        ← BACK
-      </div>
+    <!-- ===== 作者後記｜CREATOR NOTE ===== -->
 
-    </div>
-<!-- ===== 綰胭測試區｜WANYAN TEST ===== -->
-
-<div class="wanyan-test">
-  <img src="images/wanyan/hero.png" alt="綰胭">
-</div>
-  </section>
+    <section id="creator-note">
+    </section>
 
 
-  <script>
-    function enterWorld() {
-      document.getElementById("cover-page").style.display = "none";
-      document.getElementById("world-page").style.display = "block";
-    }
-
-    function backHome() {
-      document.getElementById("world-page").style.display = "none";
-      document.getElementById("cover-page").style.display = "flex";
-    }
-  </script>
+  </main>
 
 </body>
-
 </html>
