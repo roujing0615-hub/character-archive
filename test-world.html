@@ -1697,6 +1697,24 @@
 
 
   </main>
+<script>
+  function toggleAbout() {
 
+    const about =
+      document.querySelector(".about-reveal");
+
+    const button =
+      document.getElementById("about-eye");
+
+    const isOpen =
+      about.classList.toggle("open");
+
+    button.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+  }
+</script>
 </body>
 </html>
