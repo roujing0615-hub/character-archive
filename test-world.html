@@ -861,6 +861,111 @@
     width: 41%;
   }
 
+  /* ==================================================
+   在遇見她以前｜ABOUT HER
+================================================== */
+
+.about-card {
+  padding: 0;
+  min-height: 0;
+
+  overflow: hidden;
+
+  background:
+    rgba(252, 248, 245, 0.62);
+
+  border:
+    1px solid rgba(99, 74, 106, 0.15);
+
+  box-shadow:
+    0 14px 30px rgba(67, 48, 72, 0.05);
+}
+
+
+/* ----- 眼睛特寫 ----- */
+
+.about-visual {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: 16 / 7;
+
+  overflow: hidden;
+}
+
+.about-visual img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+
+/* ----- 文字 ----- */
+
+.about-copy {
+  position: relative;
+
+  padding:
+    26px
+    24px
+    30px;
+}
+
+.about-mark {
+  margin-bottom: 17px;
+
+  font-family: Georgia, serif;
+  font-size: 8px;
+
+  letter-spacing: 0.22em;
+
+  color: #967b98;
+}
+
+.about-lead {
+  margin: 0 0 15px;
+
+  font-size: 16px;
+  line-height: 1.8;
+
+  letter-spacing: 0.08em;
+
+  color: #443548;
+}
+
+.about-text {
+  margin: 0;
+
+  max-width: 92%;
+
+  font-size: 11px;
+  line-height: 2.15;
+
+  letter-spacing: 0.07em;
+
+  color: rgba(58, 47, 62, 0.68);
+}
+
+
+/* ----- 小裝飾數字 ----- */
+
+.about-copy::after {
+  content: "13";
+
+  position: absolute;
+
+  right: 18px;
+  bottom: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 38px;
+
+  color: rgba(92, 65, 99, 0.07);
+}
 }
   </style>
 
@@ -971,16 +1076,34 @@
 
       <div class="section-line"></div>
 
+<div class="about-card">
 
-      <div class="about-card">
+  <div class="about-visual">
+    <img
+      src="images/wanyan/eye-closeup.png"
+      alt="綰胭眼眸特寫"
+    >
+  </div>
 
-        <p class="placeholder-text">
-          這裡之後會放綰胭真正的角色引言。
-          我們會加入眼睛特寫、短篇文字，
-          讓這一段像翻開角色藝術誌的第一頁。
-        </p>
+  <div class="about-copy">
 
-      </div>
+    <div class="about-mark">
+      ABOUT HER · 13
+    </div>
+
+    <p class="about-lead">
+      「她很少要求誰留下。」
+    </p>
+
+    <p class="about-text">
+      關心被藏進倒茶、留燈，
+      與那些若無其事的提醒裡。
+      她越是在意，往往越顯得若無其事。
+    </p>
+
+  </div>
+
+</div>
 
     </section>
 
