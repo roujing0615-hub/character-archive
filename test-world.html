@@ -967,6 +967,217 @@
   color: rgba(92, 65, 99, 0.07);
 }
 }
+    /* ==================================================
+   ABOUT 點擊展開｜ABOUT REVEAL
+================================================== */
+
+.about-reveal {
+  position: relative;
+  width: 100%;
+}
+
+
+/* ----- 眼睛按鈕 ----- */
+
+.about-eye {
+  position: relative;
+
+  width: 100%;
+  padding: 0;
+
+  display: block;
+
+  overflow: hidden;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ----- 眼睛圖片 ----- */
+
+.about-eye img {
+  width: 100%;
+
+  aspect-ratio: 2.67 / 1;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+
+  transition:
+    transform 0.6s ease,
+    filter 0.6s ease;
+}
+
+
+/* ----- 點擊提示 ----- */
+
+.about-touch {
+  position: absolute;
+
+  right: 12px;
+  bottom: 10px;
+
+  padding: 5px 8px;
+
+  background: rgba(246, 240, 241, 0.70);
+
+  font-family: Georgia, serif;
+  font-size: 7px;
+
+  letter-spacing: 0.18em;
+
+  color: #5e4b63;
+
+  backdrop-filter: blur(4px);
+
+  transition:
+    opacity 0.35s ease;
+}
+
+
+/* ----- 隱藏卡片外層 ----- */
+
+.about-secret {
+  position: relative;
+
+  z-index: 0;
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform: translateY(-18px);
+
+  transition:
+    max-height 0.7s ease,
+    opacity 0.45s ease,
+    transform 0.65s ease;
+}
+
+
+/* ----- 卡片內容 ----- */
+
+.about-secret-inner {
+  position: relative;
+
+  margin:
+    0
+    5%;
+
+  padding:
+    27px
+    24px
+    30px;
+
+  background:
+    rgba(250, 247, 244, 0.76);
+
+  border-left:
+    1px solid rgba(91, 65, 98, 0.24);
+
+  border-right:
+    1px solid rgba(91, 65, 98, 0.10);
+
+  border-bottom:
+    1px solid rgba(91, 65, 98, 0.12);
+
+  box-shadow:
+    0 14px 28px rgba(66, 47, 71, 0.06);
+}
+
+
+/* ----- 展開狀態 ----- */
+
+.about-reveal.open .about-secret {
+  max-height: 420px;
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* 展開後眼睛稍微靠近 */
+
+.about-reveal.open .about-eye img {
+  transform: scale(1.025);
+
+  filter: brightness(0.94);
+}
+
+
+/* 展開後提示淡掉 */
+
+.about-reveal.open .about-touch {
+  opacity: 0;
+}
+
+
+/* ----- 卡片文字 ----- */
+
+.about-mark {
+  margin-bottom: 18px;
+
+  font-family: Georgia, serif;
+  font-size: 8px;
+
+  letter-spacing: 0.22em;
+
+  color: #866c89;
+}
+
+.about-lead {
+  margin:
+    0
+    0
+    17px;
+
+  font-size: 16px;
+  line-height: 1.9;
+
+  letter-spacing: 0.08em;
+
+  color: #433548;
+}
+
+.about-text {
+  width: 90%;
+
+  margin: 0;
+
+  font-size: 11px;
+  line-height: 2.2;
+
+  letter-spacing: 0.07em;
+
+  color: rgba(58, 46, 62, 0.70);
+}
+
+
+/* ----- 淡淡的 13 ----- */
+
+.about-secret-inner::after {
+  content: "13";
+
+  position: absolute;
+
+  right: 17px;
+  bottom: 7px;
+
+  font-family: Georgia, serif;
+  font-size: 40px;
+
+  color: rgba(88, 62, 94, 0.06);
+}
   </style>
 
 </head>
