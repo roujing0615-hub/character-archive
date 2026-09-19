@@ -760,6 +760,170 @@ margin-top: 18px;
       }
 
     }
+    /* ==================================================
+   綰胭｜WANYAN CSS
+   START
+================================================== */
+.wanyan-page {
+  display: none;
+}
+    /* ===== HERO｜角色扉頁 ===== */
+  
+
+.wanyan-page .wanyan-hero {
+  position: relative;
+  width: 100%;
+  min-height: 700px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(85, 57, 92, 0.14);
+}
+
+/* 背景柔光 */
+.wanyan-page .hero-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 72% 33%,
+      rgba(180, 151, 193, 0.22),
+      transparent 38%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.22),
+      rgba(255, 255, 255, 0)
+    );
+}
+
+/* 綰胭人物 */
+.wanyan-page .hero-character {
+  position: absolute;
+  width: 86%;
+  max-width: none;
+  right: -7%;
+  top: 4%;
+  margin: 0;
+  z-index: 3;
+}
+
+/* 人物與背景融合 */
+.wanyan-page .wanyan-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(246, 240, 242, 0.62) 0%,
+      rgba(246, 240, 242, 0.18) 12%,
+      rgba(246, 240, 242, 0) 27%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(246, 240, 242, 0) 70%,
+      rgba(246, 240, 242, 0.10) 82%,
+      rgba(246, 240, 242, 0.72) 100%
+    );
+}
+
+/* 裝飾 */
+.wanyan-page .hero-deco {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 4;
+  opacity: 0.88;
+  pointer-events: none;
+}
+
+/* 綰胭標準字 */
+.wanyan-page .hero-title {
+  position: absolute;
+  width: 24%;
+  height: auto;
+  left: 4%;
+  top: 17%;
+  z-index: 5;
+}
+
+/* 引言區 */
+.wanyan-page .hero-copy {
+  position: absolute;
+  left: 6%;
+  bottom: 9%;
+  width: 40%;
+  padding: 13px 12px;
+  z-index: 6;
+
+  background: rgba(250, 247, 244, 0.68);
+  border-left: 1px solid rgba(89, 63, 96, 0.32);
+}
+
+/* NO.13 */
+.wanyan-page .hero-kicker {
+  margin-bottom: 8px;
+  font-family: Georgia, serif;
+  font-size: 7px;
+  letter-spacing: 0.16em;
+  color: rgba(72, 54, 77, 0.62);
+}
+
+/* 引言 */
+.wanyan-page .hero-quote {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.9;
+  letter-spacing: 0.05em;
+  color: #493b4d;
+}
+
+/* 出處 */
+.wanyan-page .hero-source {
+  margin-top: 8px;
+  font-size: 7px;
+  letter-spacing: 0.08em;
+  color: rgba(72, 54, 77, 0.58);
+}
+
+/* 手機 */
+@media (max-width: 430px) {
+
+  .wanyan-page .wanyan-hero {
+    min-height: 680px;
+  }
+
+  .wanyan-page .hero-character {
+    width: 91%;
+    right: -10%;
+    top: 5%;
+  }
+
+  .wanyan-page .hero-title {
+    width: 23%;
+    left: 4%;
+    top: 17%;
+  }
+
+  .wanyan-page .hero-copy {
+    left: 6%;
+    bottom: 8%;
+    width: 41%;
+  }
+}
+
+
+/* ==================================================
+   綰胭｜WANYAN CSS
+   END
+================================================== */
 
   </style>
 </head>
@@ -1116,7 +1280,53 @@ margin-top: 18px;
        HERO｜角色扉頁
   ================================================== -->
 
-  <!-- HERO 等一下搬進這裡 -->
+   <section
+      class="wanyan-hero"
+      id="hero"
+    >
+
+      <div class="hero-glow"></div>
+
+
+      <img
+        class="hero-character"
+        src="images/wanyan/hero.png"
+        alt="綰胭"
+      >
+
+
+      <img
+        class="hero-deco"
+        src="images/wanyan/hero-deco.png"
+        alt=""
+      >
+
+
+      <img
+        class="hero-title"
+        src="images/wanyan/wanyan-title.png"
+        alt="綰胭"
+      >
+
+
+      <div class="hero-copy">
+
+        <div class="hero-kicker">
+          NO.13 · PAWNSHOP ARCHIVE
+        </div>
+
+        <p class="hero-quote">
+          「有些東西一旦典出去，<br>
+          就未必還贖得回來。」
+        </p>
+
+        <div class="hero-source">
+          十三號當舖掌櫃
+        </div>
+
+      </div>
+
+   </section>
 
 
   <!-- ==================================================
