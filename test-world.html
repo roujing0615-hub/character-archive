@@ -1306,6 +1306,201 @@
   }
 
 }
+    /* ==================================================
+   她的故事｜HER STORY
+================================================== */
+
+.story-fragments {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+
+  margin-top: 30px;
+}
+
+
+/* ----- 單張故事碎片 ----- */
+
+.story-card {
+  position: relative;
+
+  background:
+    rgba(250, 247, 244, 0.58);
+
+  border:
+    1px solid rgba(99, 73, 105, 0.13);
+
+  overflow: hidden;
+}
+
+
+/* ----- 圖片 ----- */
+
+.story-image {
+  position: relative;
+
+  width: 100%;
+  height: 250px;
+
+  overflow: hidden;
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* ----- 文字區 ----- */
+
+.story-copy {
+  position: relative;
+
+  padding:
+    25px
+    24px
+    28px;
+}
+
+.story-index {
+  margin-bottom: 9px;
+
+  font-family: Georgia, serif;
+  font-size: 7px;
+
+  letter-spacing: 0.24em;
+
+  color: #957b98;
+}
+
+.story-copy h3 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 400;
+
+  letter-spacing: 0.08em;
+
+  color: #413446;
+}
+
+.story-cn {
+  margin-top: 7px;
+
+  font-size: 11px;
+
+  letter-spacing: 0.16em;
+
+  color: #806982;
+}
+
+.story-copy p {
+  width: 88%;
+
+  margin:
+    18px
+    0
+    0;
+
+  font-size: 10px;
+  line-height: 2.1;
+
+  letter-spacing: 0.07em;
+
+  color: rgba(57, 46, 61, 0.64);
+}
+
+
+/* ----- 第一張：物件 ----- */
+
+.story-belongings .story-image {
+  height: 225px;
+}
+
+.story-belongings .story-image img {
+  object-position: center 52%;
+}
+
+
+/* ----- 第二張：當舖 ----- */
+
+.story-pawnshop .story-image {
+  height: 285px;
+}
+
+.story-pawnshop .story-image img {
+  object-position: center 45%;
+}
+
+
+/* ----- 第三張：過去 ----- */
+
+.story-past {
+  margin-left: 8%;
+}
+
+.story-past .story-image {
+  height: 240px;
+}
+
+.story-past .story-image img {
+  object-position: center 48%;
+}
+
+
+/* ----- 淡淡的 13 ----- */
+
+.story-past .story-copy::after {
+  content: "13";
+
+  position: absolute;
+
+  right: 15px;
+  bottom: 3px;
+
+  font-family: Georgia, serif;
+  font-size: 48px;
+  font-style: italic;
+
+  color:
+    rgba(83, 58, 90, 0.055);
+}
+
+
+/* ----- 手機 ----- */
+
+@media (max-width: 430px) {
+
+  .story-fragments {
+    gap: 28px;
+  }
+
+  .story-image {
+    height: 220px;
+  }
+
+  .story-belongings .story-image {
+    height: 205px;
+  }
+
+  .story-pawnshop .story-image {
+    height: 255px;
+  }
+
+  .story-past {
+    margin-left: 7%;
+  }
+
+  .story-past .story-image {
+    height: 220px;
+  }
+
+}
   </style>
 
 </head>
