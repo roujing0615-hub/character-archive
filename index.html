@@ -1103,110 +1103,258 @@ margin-top: 18px;
 
   color: rgba(88, 62, 94, 0.06);
 }
-/* ==================================================
-   人物檔案｜CHARACTER FILE EDITORIAL
+
+    /* ==================================================
+   人物檔案｜CHARACTER FILE
+   十三號當舖私人檔案
 ================================================== */
 
 .wanyan-page .profile-editorial {
   position: relative;
   padding-top: 72px;
-  padding-bottom: 90px;
+  padding-bottom: 96px;
   overflow: hidden;
 }
 
 
-/* ---------- 主要內容 ---------- */
+/* ==================================================
+   檔案主體
+================================================== */
 
 .wanyan-page .profile-editorial-body {
   position: relative;
-  margin-top: 34px;
-  padding: 8px 7% 12px;
+
+  margin-top: 38px;
+  margin-left: 7%;
+  margin-right: 7%;
+
+  padding:
+    38px
+    28px
+    34px;
+
+  border-top:
+    1px solid rgba(123, 94, 128, 0.28);
+
+  border-bottom:
+    1px solid rgba(123, 94, 128, 0.20);
 }
 
 
-/* ---------- 姓名區 ---------- */
+/* 左上小檔案編號 */
+
+.wanyan-page .profile-editorial-body::before {
+  content: "PRIVATE RECORD · NO.13";
+
+  position: absolute;
+  top: -18px;
+  left: 0;
+
+  font-family: Georgia, serif;
+  font-size: 6px;
+  letter-spacing: 0.28em;
+
+  color: rgba(91, 66, 96, 0.46);
+}
+
+
+/* 右側檔案索引 */
+
+.wanyan-page .profile-editorial-body::after {
+  content: "PAWNSHOP ARCHIVE";
+
+  position: absolute;
+  right: -19px;
+  top: 42px;
+
+  writing-mode: vertical-rl;
+
+  font-family: Georgia, serif;
+  font-size: 6px;
+  letter-spacing: 0.30em;
+
+  color: rgba(91, 66, 96, 0.30);
+
+  pointer-events: none;
+}
+
+
+/* ==================================================
+   姓名區
+================================================== */
 
 .wanyan-page .profile-name-block {
   position: relative;
-  padding: 24px 0 30px;
-  border-bottom: 1px solid rgba(92, 67, 97, 0.18);
+
+  padding:
+    12px
+    0
+    32px;
+
+  border-bottom:
+    1px solid rgba(92, 67, 97, 0.16);
 }
+
+
+/* NAME · 01 */
 
 .wanyan-page .profile-mini-label {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   font-family: Georgia, serif;
-  font-size: 7px;
-  letter-spacing: 0.24em;
+  font-size: 6px;
+  letter-spacing: 0.27em;
 
-  color: rgba(91, 66, 96, 0.52);
+  color: rgba(101, 73, 106, 0.50);
 }
+
+
+/* 綰胭 */
 
 .wanyan-page .profile-name {
   position: relative;
-  z-index: 2;
+
+  margin: 0;
 
   font-family:
     "Noto Serif TC",
     "Songti TC",
     serif;
 
-  font-size: 42px;
-  line-height: 1.1;
-  letter-spacing: 0.16em;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+
+  letter-spacing: 0.18em;
 
   color: #443348;
 }
 
+
+/* WAN YAN */
+
 .wanyan-page .profile-name-en {
-  margin-top: 8px;
+  margin-top: 12px;
 
   font-family: Georgia, serif;
-  font-size: 9px;
-  letter-spacing: 0.32em;
+  font-size: 8px;
+  letter-spacing: 0.36em;
 
-  color: #927a94;
+  color: rgba(127, 94, 130, 0.68);
 }
+
+
+/* 身份 */
 
 .wanyan-page .profile-role {
-  margin-top: 22px;
+  position: relative;
 
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  margin-top: 27px;
+  padding-left: 18px;
+
+  font-size: 10px;
   line-height: 1.8;
+  letter-spacing: 0.12em;
 
-  color: rgba(61, 48, 65, 0.72);
+  color: rgba(62, 48, 66, 0.72);
 }
 
 
-/* ---------- AGE / HEIGHT ---------- */
+/* 身份前的小金線 */
+
+.wanyan-page .profile-role::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 50%;
+
+  width: 10px;
+  height: 1px;
+
+  background:
+    rgba(150, 117, 80, 0.60);
+}
+
+
+/* ==================================================
+   AGE / HEIGHT
+================================================== */
 
 .wanyan-page .profile-facts {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns:
+    1fr
+    1fr;
 
-  gap: 22px;
+  position: relative;
 
-  padding: 27px 0 30px;
+  padding:
+    28px
+    0
+    30px;
 
-  border-bottom: 1px solid rgba(92, 67, 97, 0.18);
+  border-bottom:
+    1px solid rgba(92, 67, 97, 0.16);
 }
+
+
+/* 中間分隔線 */
+
+.wanyan-page .profile-facts::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  top: 25px;
+  bottom: 27px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(124, 94, 129, 0),
+      rgba(124, 94, 129, 0.24),
+      rgba(124, 94, 129, 0)
+    );
+}
+
 
 .wanyan-page .profile-fact {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+
+  gap: 10px;
 }
+
+
+.wanyan-page .profile-fact:nth-child(2) {
+  padding-left: 25px;
+}
+
+
+/* AGE / HEIGHT */
 
 .wanyan-page .profile-fact-label {
   font-family: Georgia, serif;
-  font-size: 7px;
-  letter-spacing: 0.22em;
+  font-size: 6px;
+  letter-spacing: 0.26em;
 
   color: rgba(101, 74, 106, 0.48);
 }
 
+
+/* 資料 */
+
 .wanyan-page .profile-fact-value {
+  font-family:
+    "Noto Serif TC",
+    "Songti TC",
+    serif;
+
   font-size: 11px;
   line-height: 1.8;
   letter-spacing: 0.08em;
@@ -1215,53 +1363,139 @@ margin-top: 18px;
 }
 
 
-/* ---------- 13 印記 ---------- */
+/* ==================================================
+   13｜印記
+================================================== */
 
 .wanyan-page .profile-mark {
   position: relative;
 
   display: grid;
-  grid-template-columns: 105px 1fr;
+  grid-template-columns:
+    118px
+    1fr;
+
   align-items: center;
 
-  min-height: 150px;
-  padding-top: 24px;
+  min-height: 176px;
+
+  padding-top: 20px;
 }
+
+
+/* 大 13 */
 
 .wanyan-page .profile-mark-number {
   position: relative;
+  z-index: 1;
 
   font-family: Georgia, serif;
-  font-size: 76px;
+
+  font-size: 82px;
   font-style: italic;
   line-height: 1;
 
-  color: rgba(89, 61, 96, 0.16);
+  letter-spacing: -0.06em;
+
+  color:
+    rgba(86, 57, 93, 0.17);
 }
+
+
+/* 13 背後的檔案印章 */
+
+.wanyan-page .profile-mark-number::before {
+  content: "";
+
+  position: absolute;
+
+  width: 94px;
+  height: 94px;
+
+  left: -12px;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(-8deg);
+
+  border:
+    1px solid rgba(154, 119, 82, 0.23);
+
+  border-radius: 50%;
+
+  z-index: -1;
+}
+
+
+/* 圓章第二圈 */
 
 .wanyan-page .profile-mark-number::after {
   content: "";
 
   position: absolute;
 
-  width: 52px;
-  height: 1px;
+  width: 78px;
+  height: 78px;
 
-  left: 42px;
+  left: -4px;
   top: 50%;
 
-  background:
-    linear-gradient(
-      to right,
-      rgba(136, 106, 79, 0.55),
-      rgba(136, 106, 79, 0)
-    );
+  transform:
+    translateY(-50%)
+    rotate(-8deg);
+
+  border:
+    1px solid rgba(126, 94, 131, 0.11);
+
+  border-radius: 50%;
+
+  z-index: -1;
 }
+
+
+/* MARK 文字區 */
 
 .wanyan-page .profile-mark-copy {
   position: relative;
-  padding-left: 15px;
+
+  padding-left: 22px;
 }
+
+
+/* 金色直線 */
+
+.wanyan-page .profile-mark-copy::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 1px;
+  height: 66px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(151, 116, 78, 0.55),
+      rgba(151, 116, 78, 0)
+    );
+}
+
+
+/* MARK */
+
+.wanyan-page .profile-mark-copy .profile-mini-label {
+  margin-bottom: 9px;
+
+  color:
+    rgba(132, 99, 73, 0.65);
+}
+
+
+/* 左肩近心口 / 淡黃色印記 */
 
 .wanyan-page .profile-mark-copy p {
   margin: 0;
@@ -1270,108 +1504,196 @@ margin-top: 18px;
   line-height: 2;
   letter-spacing: 0.10em;
 
-  color: rgba(67, 52, 71, 0.70);
+  color:
+    rgba(67, 52, 71, 0.70);
 }
 
 
-/* ---------- 淡淡的裝飾字 ---------- */
+/* ==================================================
+   很淡的裝飾編號
+================================================== */
 
-.wanyan-page .profile-editorial-body::after {
-  content: "PAWNSHOP ARCHIVE";
+.wanyan-page .profile-name-block::after {
+  content: "13";
 
   position: absolute;
-  right: -28px;
-  top: 82px;
+
+  right: -5px;
+  top: 4px;
 
   font-family: Georgia, serif;
-  font-size: 7px;
-  letter-spacing: 0.30em;
 
-  color: rgba(91, 66, 96, 0.18);
+  font-size: 52px;
+  font-style: italic;
 
-  transform: rotate(90deg);
-  transform-origin: center;
+  color:
+    rgba(89, 61, 96, 0.045);
 
   pointer-events: none;
 }
 
 
-/* ---------- 手機 ---------- */
+/* ==================================================
+   手機
+================================================== */
 
 @media (max-width: 430px) {
 
   .wanyan-page .profile-editorial {
     padding-top: 62px;
-    padding-bottom: 78px;
+    padding-bottom: 82px;
   }
 
   .wanyan-page .profile-editorial-body {
-    margin-top: 28px;
-    padding-left: 8%;
-    padding-right: 8%;
+    margin-top: 34px;
+
+    margin-left: 6%;
+    margin-right: 6%;
+
+    padding:
+      34px
+      20px
+      28px;
   }
 
   .wanyan-page .profile-name {
-    font-size: 38px;
+    font-size: 40px;
+  }
+
+  .wanyan-page .profile-fact:nth-child(2) {
+    padding-left: 20px;
   }
 
   .wanyan-page .profile-mark {
-    grid-template-columns: 94px 1fr;
+    grid-template-columns:
+      105px
+      1fr;
+
+    min-height: 164px;
   }
 
   .wanyan-page .profile-mark-number {
-    font-size: 68px;
+    font-size: 74px;
   }
 
-    }
- /* ==================================================
-   故事碎片｜HER STORY EDITORIAL
+  .wanyan-page .profile-mark-number::before {
+    width: 84px;
+    height: 84px;
+  }
+
+  .wanyan-page .profile-mark-number::after {
+    width: 69px;
+    height: 69px;
+  }
+
+  }
+/* ==================================================
+   故事碎片｜HER STORY
+   三張直式故事頁
 ================================================== */
 
 .wanyan-page .story-editorial {
   position: relative;
-  padding-top: 72px;
-  padding-bottom: 100px;
+  padding-top: 68px;
+  padding-bottom: 90px;
   overflow: hidden;
 }
 
 .wanyan-page .story-fragments {
-  margin-top: 38px;
+  margin-top: 34px;
 }
 
 
-/* ---------- 共用 ---------- */
+/* ---------- 共用直式骨架 ---------- */
 
 .wanyan-page .story-fragment {
   position: relative;
-  margin-bottom: 74px;
+
+  width: 76%;
+  margin-bottom: 58px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 14px 30px rgba(57, 41, 61, 0.10);
 }
+
+.wanyan-page .story-fragment:nth-child(odd) {
+  margin-left: 6%;
+  margin-right: auto;
+}
+
+.wanyan-page .story-fragment:nth-child(even) {
+  margin-left: auto;
+  margin-right: 6%;
+}
+
+
+/* ---------- 圖片 ---------- */
 
 .wanyan-page .story-image {
   position: relative;
+
+  width: 100%;
+  aspect-ratio: 3 / 4;
+
   overflow: hidden;
 }
 
 .wanyan-page .story-image img {
   display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
+
+/* 圖片下方漸暗，讓文字清楚 */
+
+.wanyan-page .story-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(28, 20, 31, 0) 38%,
+      rgba(28, 20, 31, 0.18) 60%,
+      rgba(28, 20, 31, 0.72) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+/* ---------- 疊在圖上的文字 ---------- */
+
 .wanyan-page .story-copy {
-  position: relative;
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
   z-index: 2;
+
+  padding: 24px 22px 22px;
+
+  color: #f8f3f4;
 }
 
 .wanyan-page .story-index {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   font-family: Georgia, serif;
   font-size: 7px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.24em;
 
-  color: rgba(103, 76, 107, 0.52);
+  color: rgba(248, 238, 240, 0.68);
 }
 
 .wanyan-page .story-copy h3 {
@@ -1382,170 +1704,85 @@ margin-top: 18px;
     "Songti TC",
     serif;
 
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 400;
+  line-height: 1.45;
   letter-spacing: 0.10em;
 
-  color: #49384d;
+  color: #fffafb;
 }
 
 .wanyan-page .story-en {
-  margin-top: 7px;
+  margin-top: 6px;
 
   font-family: Georgia, serif;
   font-size: 7px;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.20em;
 
-  color: #9b819c;
+  color: rgba(246, 233, 238, 0.72);
 }
 
 .wanyan-page .story-copy p {
-  margin: 18px 0 0;
+  margin: 13px 0 0;
 
-  font-size: 10px;
-  line-height: 2.1;
-  letter-spacing: 0.07em;
+  max-width: 92%;
 
-  color: rgba(61, 48, 65, 0.68);
+  font-size: 9px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  color: rgba(255, 248, 250, 0.82);
 }
 
 
-/* ==================================================
-   01｜她的物件
-================================================== */
+/* ---------- 很淡的編號 ---------- */
 
-.wanyan-page .story-belongings {
-  padding: 0 7%;
-}
-
-.wanyan-page .story-belongings .story-image {
-  width: 78%;
-  aspect-ratio: 1 / 1;
-
-  border-radius: 48% 48% 4px 4px;
-}
-
-.wanyan-page .story-belongings .story-copy {
-  width: 67%;
-
-  margin-top: -42px;
-  margin-left: auto;
-
-  padding: 22px 20px 20px;
-
-  background: rgba(249, 245, 243, 0.88);
-
-  border-top:
-    1px solid rgba(145, 112, 78, 0.30);
-
-  box-shadow:
-    0 14px 30px rgba(65, 46, 70, 0.07);
-}
-
-
-/* ==================================================
-   02｜十三號當舖
-================================================== */
-
-.wanyan-page .story-pawnshop {
-  padding: 0;
-}
-
-.wanyan-page .story-pawnshop .story-image {
-  width: 100%;
-  aspect-ratio: 1.45 / 1;
-}
-
-.wanyan-page .story-pawnshop .story-image::after {
-  content: "";
-
+.wanyan-page .story-fragment::before {
   position: absolute;
-  inset: 0;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(38, 27, 41, 0.38),
-      rgba(38, 27, 41, 0) 58%
-    );
+  right: 14px;
+  top: 10px;
+
+  z-index: 3;
+
+  font-family: Georgia, serif;
+  font-size: 34px;
+  font-style: italic;
+
+  color: rgba(255, 247, 249, 0.22);
 
   pointer-events: none;
 }
 
-.wanyan-page .story-pawnshop .story-copy {
-  width: 76%;
-
-  margin-top: -28px;
-  margin-left: 8%;
-
-  padding: 22px 22px 4px;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(247, 242, 242, 0.94),
-      rgba(238, 231, 240, 0.90)
-    );
-
-  border-left:
-    2px solid rgba(126, 95, 132, 0.30);
+.wanyan-page .story-belongings::before {
+  content: "01";
 }
 
-
-/* ==================================================
-   03｜活下去
-================================================== */
-
-.wanyan-page .story-past {
-  padding: 24px 8% 0;
+.wanyan-page .story-pawnshop::before {
+  content: "02";
 }
 
 .wanyan-page .story-past::before {
   content: "03";
-
-  position: absolute;
-  right: 5%;
-  top: -22px;
-
-  font-family: Georgia, serif;
-  font-size: 76px;
-  font-style: italic;
-
-  color: rgba(85, 59, 91, 0.055);
-
-  pointer-events: none;
-}
-
-.wanyan-page .story-past .story-image {
-  width: 88%;
-  margin-left: auto;
-
-  aspect-ratio: 1.15 / 1;
-
-  transform: rotate(1.2deg);
-
-  box-shadow:
-    0 18px 36px rgba(64, 46, 68, 0.10);
-}
-
-.wanyan-page .story-past .story-copy {
-  width: 76%;
-
-  margin-top: 24px;
-  margin-left: 2%;
-
-  padding-left: 17px;
-
-  border-left:
-    1px solid rgba(145, 112, 78, 0.38);
-}
-
-.wanyan-page .story-past .story-copy h3 {
-  font-size: 24px;
 }
 
 
-/* ---------- 最後一張之後不要留雙倍空間 ---------- */
+/* ---------- 每張圖的裁切位置 ---------- */
+
+.wanyan-page .story-belongings img {
+  object-position: center;
+}
+
+.wanyan-page .story-pawnshop img {
+  object-position: center;
+}
+
+.wanyan-page .story-past img {
+  object-position: center;
+}
+
+
+/* ---------- 最後一張 ---------- */
 
 .wanyan-page .story-fragment:last-child {
   margin-bottom: 0;
@@ -1558,36 +1795,28 @@ margin-top: 18px;
 
   .wanyan-page .story-editorial {
     padding-top: 62px;
-    padding-bottom: 84px;
-  }
-
-  .wanyan-page .story-fragments {
-    margin-top: 32px;
+    padding-bottom: 80px;
   }
 
   .wanyan-page .story-fragment {
-    margin-bottom: 66px;
-  }
-
-  .wanyan-page .story-belongings .story-image {
-    width: 82%;
-  }
-
-  .wanyan-page .story-belongings .story-copy {
-    width: 70%;
-    margin-top: -36px;
-  }
-
-  .wanyan-page .story-pawnshop .story-copy {
     width: 78%;
+    margin-bottom: 52px;
   }
 
-  .wanyan-page .story-past .story-image {
-    width: 90%;
+  .wanyan-page .story-fragment:nth-child(odd) {
+    margin-left: 5%;
+  }
+
+  .wanyan-page .story-fragment:nth-child(even) {
+    margin-right: 5%;
+  }
+
+  .wanyan-page .story-copy {
+    padding: 22px 19px 19px;
   }
 
 }
-  
+
 /* ==================================================
    綰胭｜WANYAN CSS
    END
