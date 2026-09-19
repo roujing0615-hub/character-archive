@@ -1103,7 +1103,491 @@ margin-top: 18px;
 
   color: rgba(88, 62, 94, 0.06);
 }
+/* ==================================================
+   人物檔案｜CHARACTER FILE EDITORIAL
+================================================== */
 
+.wanyan-page .profile-editorial {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 90px;
+  overflow: hidden;
+}
+
+
+/* ---------- 主要內容 ---------- */
+
+.wanyan-page .profile-editorial-body {
+  position: relative;
+  margin-top: 34px;
+  padding: 8px 7% 12px;
+}
+
+
+/* ---------- 姓名區 ---------- */
+
+.wanyan-page .profile-name-block {
+  position: relative;
+  padding: 24px 0 30px;
+  border-bottom: 1px solid rgba(92, 67, 97, 0.18);
+}
+
+.wanyan-page .profile-mini-label {
+  margin-bottom: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 7px;
+  letter-spacing: 0.24em;
+
+  color: rgba(91, 66, 96, 0.52);
+}
+
+.wanyan-page .profile-name {
+  position: relative;
+  z-index: 2;
+
+  font-family:
+    "Noto Serif TC",
+    "Songti TC",
+    serif;
+
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: 0.16em;
+
+  color: #443348;
+}
+
+.wanyan-page .profile-name-en {
+  margin-top: 8px;
+
+  font-family: Georgia, serif;
+  font-size: 9px;
+  letter-spacing: 0.32em;
+
+  color: #927a94;
+}
+
+.wanyan-page .profile-role {
+  margin-top: 22px;
+
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  line-height: 1.8;
+
+  color: rgba(61, 48, 65, 0.72);
+}
+
+
+/* ---------- AGE / HEIGHT ---------- */
+
+.wanyan-page .profile-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 22px;
+
+  padding: 27px 0 30px;
+
+  border-bottom: 1px solid rgba(92, 67, 97, 0.18);
+}
+
+.wanyan-page .profile-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.wanyan-page .profile-fact-label {
+  font-family: Georgia, serif;
+  font-size: 7px;
+  letter-spacing: 0.22em;
+
+  color: rgba(101, 74, 106, 0.48);
+}
+
+.wanyan-page .profile-fact-value {
+  font-size: 11px;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+
+  color: #514255;
+}
+
+
+/* ---------- 13 印記 ---------- */
+
+.wanyan-page .profile-mark {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 105px 1fr;
+  align-items: center;
+
+  min-height: 150px;
+  padding-top: 24px;
+}
+
+.wanyan-page .profile-mark-number {
+  position: relative;
+
+  font-family: Georgia, serif;
+  font-size: 76px;
+  font-style: italic;
+  line-height: 1;
+
+  color: rgba(89, 61, 96, 0.16);
+}
+
+.wanyan-page .profile-mark-number::after {
+  content: "";
+
+  position: absolute;
+
+  width: 52px;
+  height: 1px;
+
+  left: 42px;
+  top: 50%;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(136, 106, 79, 0.55),
+      rgba(136, 106, 79, 0)
+    );
+}
+
+.wanyan-page .profile-mark-copy {
+  position: relative;
+  padding-left: 15px;
+}
+
+.wanyan-page .profile-mark-copy p {
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 2;
+  letter-spacing: 0.10em;
+
+  color: rgba(67, 52, 71, 0.70);
+}
+
+
+/* ---------- 淡淡的裝飾字 ---------- */
+
+.wanyan-page .profile-editorial-body::after {
+  content: "PAWNSHOP ARCHIVE";
+
+  position: absolute;
+  right: -28px;
+  top: 82px;
+
+  font-family: Georgia, serif;
+  font-size: 7px;
+  letter-spacing: 0.30em;
+
+  color: rgba(91, 66, 96, 0.18);
+
+  transform: rotate(90deg);
+  transform-origin: center;
+
+  pointer-events: none;
+}
+
+
+/* ---------- 手機 ---------- */
+
+@media (max-width: 430px) {
+
+  .wanyan-page .profile-editorial {
+    padding-top: 62px;
+    padding-bottom: 78px;
+  }
+
+  .wanyan-page .profile-editorial-body {
+    margin-top: 28px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  .wanyan-page .profile-name {
+    font-size: 38px;
+  }
+
+  .wanyan-page .profile-mark {
+    grid-template-columns: 94px 1fr;
+  }
+
+  .wanyan-page .profile-mark-number {
+    font-size: 68px;
+  }
+
+    }
+ /* ==================================================
+   故事碎片｜HER STORY EDITORIAL
+================================================== */
+
+.wanyan-page .story-editorial {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.wanyan-page .story-fragments {
+  margin-top: 38px;
+}
+
+
+/* ---------- 共用 ---------- */
+
+.wanyan-page .story-fragment {
+  position: relative;
+  margin-bottom: 74px;
+}
+
+.wanyan-page .story-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.wanyan-page .story-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wanyan-page .story-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.wanyan-page .story-index {
+  margin-bottom: 10px;
+
+  font-family: Georgia, serif;
+  font-size: 7px;
+  letter-spacing: 0.25em;
+
+  color: rgba(103, 76, 107, 0.52);
+}
+
+.wanyan-page .story-copy h3 {
+  margin: 0;
+
+  font-family:
+    "Noto Serif TC",
+    "Songti TC",
+    serif;
+
+  font-size: 21px;
+  font-weight: 400;
+  letter-spacing: 0.10em;
+
+  color: #49384d;
+}
+
+.wanyan-page .story-en {
+  margin-top: 7px;
+
+  font-family: Georgia, serif;
+  font-size: 7px;
+  letter-spacing: 0.22em;
+
+  color: #9b819c;
+}
+
+.wanyan-page .story-copy p {
+  margin: 18px 0 0;
+
+  font-size: 10px;
+  line-height: 2.1;
+  letter-spacing: 0.07em;
+
+  color: rgba(61, 48, 65, 0.68);
+}
+
+
+/* ==================================================
+   01｜她的物件
+================================================== */
+
+.wanyan-page .story-belongings {
+  padding: 0 7%;
+}
+
+.wanyan-page .story-belongings .story-image {
+  width: 78%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 48% 48% 4px 4px;
+}
+
+.wanyan-page .story-belongings .story-copy {
+  width: 67%;
+
+  margin-top: -42px;
+  margin-left: auto;
+
+  padding: 22px 20px 20px;
+
+  background: rgba(249, 245, 243, 0.88);
+
+  border-top:
+    1px solid rgba(145, 112, 78, 0.30);
+
+  box-shadow:
+    0 14px 30px rgba(65, 46, 70, 0.07);
+}
+
+
+/* ==================================================
+   02｜十三號當舖
+================================================== */
+
+.wanyan-page .story-pawnshop {
+  padding: 0;
+}
+
+.wanyan-page .story-pawnshop .story-image {
+  width: 100%;
+  aspect-ratio: 1.45 / 1;
+}
+
+.wanyan-page .story-pawnshop .story-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(38, 27, 41, 0.38),
+      rgba(38, 27, 41, 0) 58%
+    );
+
+  pointer-events: none;
+}
+
+.wanyan-page .story-pawnshop .story-copy {
+  width: 76%;
+
+  margin-top: -28px;
+  margin-left: 8%;
+
+  padding: 22px 22px 4px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(247, 242, 242, 0.94),
+      rgba(238, 231, 240, 0.90)
+    );
+
+  border-left:
+    2px solid rgba(126, 95, 132, 0.30);
+}
+
+
+/* ==================================================
+   03｜活下去
+================================================== */
+
+.wanyan-page .story-past {
+  padding: 24px 8% 0;
+}
+
+.wanyan-page .story-past::before {
+  content: "03";
+
+  position: absolute;
+  right: 5%;
+  top: -22px;
+
+  font-family: Georgia, serif;
+  font-size: 76px;
+  font-style: italic;
+
+  color: rgba(85, 59, 91, 0.055);
+
+  pointer-events: none;
+}
+
+.wanyan-page .story-past .story-image {
+  width: 88%;
+  margin-left: auto;
+
+  aspect-ratio: 1.15 / 1;
+
+  transform: rotate(1.2deg);
+
+  box-shadow:
+    0 18px 36px rgba(64, 46, 68, 0.10);
+}
+
+.wanyan-page .story-past .story-copy {
+  width: 76%;
+
+  margin-top: 24px;
+  margin-left: 2%;
+
+  padding-left: 17px;
+
+  border-left:
+    1px solid rgba(145, 112, 78, 0.38);
+}
+
+.wanyan-page .story-past .story-copy h3 {
+  font-size: 24px;
+}
+
+
+/* ---------- 最後一張之後不要留雙倍空間 ---------- */
+
+.wanyan-page .story-fragment:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ---------- 手機 ---------- */
+
+@media (max-width: 430px) {
+
+  .wanyan-page .story-editorial {
+    padding-top: 62px;
+    padding-bottom: 84px;
+  }
+
+  .wanyan-page .story-fragments {
+    margin-top: 32px;
+  }
+
+  .wanyan-page .story-fragment {
+    margin-bottom: 66px;
+  }
+
+  .wanyan-page .story-belongings .story-image {
+    width: 82%;
+  }
+
+  .wanyan-page .story-belongings .story-copy {
+    width: 70%;
+    margin-top: -36px;
+  }
+
+  .wanyan-page .story-pawnshop .story-copy {
+    width: 78%;
+  }
+
+  .wanyan-page .story-past .story-image {
+    width: 90%;
+  }
+
+}
+  
 /* ==================================================
    綰胭｜WANYAN CSS
    END
@@ -1592,15 +2076,233 @@ margin-top: 18px;
   <!-- ==================================================
        CHARACTER FILE｜人物檔案
   ================================================== -->
+<section
+  class="character-section profile-editorial"
+  id="profile"
+>
 
-  <!-- 人物檔案定案後搬進這裡 -->
+  <div class="section-number">
+    02
+  </div>
+
+  <h2 class="section-title">
+    CHARACTER FILE
+  </h2>
+
+  <div class="section-cn">
+    人物檔案
+  </div>
+
+  <div class="section-line"></div>
+
+
+  <div class="profile-editorial-body">
+
+    <!-- 姓名 -->
+    <div class="profile-name-block">
+
+      <div class="profile-mini-label">
+        NAME · 01
+      </div>
+
+      <div class="profile-name">
+        綰胭
+      </div>
+
+      <div class="profile-name-en">
+        WAN YAN
+      </div>
+
+      <div class="profile-role">
+        十三號當舖掌櫃
+      </div>
+
+    </div>
+
+
+    <!-- 基本資料 -->
+    <div class="profile-facts">
+
+      <div class="profile-fact">
+        <span class="profile-fact-label">
+          AGE
+        </span>
+
+        <span class="profile-fact-value">
+          外貌約二十八
+        </span>
+      </div>
+
+
+      <div class="profile-fact">
+        <span class="profile-fact-label">
+          HEIGHT
+        </span>
+
+        <span class="profile-fact-value">
+          170 CM
+        </span>
+      </div>
+
+    </div>
+
+
+    <!-- 印記 -->
+    <div class="profile-mark">
+
+      <div class="profile-mark-number">
+        13
+      </div>
+
+      <div class="profile-mark-copy">
+
+        <div class="profile-mini-label">
+          MARK
+        </div>
+
+        <p>
+          左肩近心口<br>
+          淡黃色印記
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
   <!-- ==================================================
        HER STORY｜故事碎片
   ================================================== -->
+<section
+  class="character-section story-editorial"
+  id="story"
+>
 
-  <!-- 故事碎片定案後搬進這裡 -->
+  <div class="section-number">
+    03
+  </div>
+
+  <h2 class="section-title">
+    HER STORY
+  </h2>
+
+  <div class="section-cn">
+    關於她留下的痕跡
+  </div>
+
+  <div class="section-line"></div>
+
+
+  <div class="story-fragments">
+
+    <!-- 01｜她的物件 -->
+    <article class="story-fragment story-belongings">
+
+      <div class="story-image">
+        <img
+          src="images/wanyan/wanyan-belongings.png"
+          alt="綰胭的隨身物件"
+        >
+      </div>
+
+      <div class="story-copy">
+
+        <div class="story-index">
+          FRAGMENT · 01
+        </div>
+
+        <h3>
+          她的物件
+        </h3>
+
+        <div class="story-en">
+          HER BELONGINGS
+        </div>
+
+        <p>
+          有些東西被留在身邊太久，
+          久到它們也開始替主人記得。
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 02｜十三號當舖 -->
+    <article class="story-fragment story-pawnshop">
+
+      <div class="story-image">
+        <img
+          src="images/wanyan/wanyan-pawnshop.png"
+          alt="十三號當舖"
+        >
+      </div>
+
+      <div class="story-copy">
+
+        <div class="story-index">
+          FRAGMENT · 02
+        </div>
+
+        <h3>
+          十三號當舖
+        </h3>
+
+        <div class="story-en">
+          THE PAWNSHOP
+        </div>
+
+        <p>
+          她替來客收下執念與代價，
+          卻很少談起自己究竟留在這裡多久。
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- 03｜過去 -->
+    <article class="story-fragment story-past">
+
+      <div class="story-image">
+        <img
+          src="images/wanyan/past-note.png"
+          alt="寫著活下去的舊紙條"
+        >
+      </div>
+
+      <div class="story-copy">
+
+        <div class="story-index">
+          FRAGMENT · 03
+        </div>
+
+        <h3>
+          「活下去。」
+        </h3>
+
+        <div class="story-en">
+          A FRAGMENT OF THE PAST
+        </div>
+
+        <p>
+          有些字跡沒有隨歲月褪去。
+          她不常提起，而它始終被留下。
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
 
 
   <!-- ==================================================
