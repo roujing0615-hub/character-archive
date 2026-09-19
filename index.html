@@ -1134,7 +1134,10 @@ margin-top: 18px;
 
         <!-- 01｜沉星之岸 -->
 
- <article class="collection collection-full">
+ <article
+  class="collection collection-full"
+  onclick="openWanyan()"
+>
 
   <div class="collection-art">
     <img src="images/home/contents-01.png" alt="">
@@ -1400,7 +1403,19 @@ margin-top: 18px;
       window.scrollTo(0, 0);
 
     }
+function openWanyan() {
 
+  document
+    .getElementById("world-page")
+    .style.display = "none";
+
+  document
+    .getElementById("wanyan")
+    .style.display = "block";
+
+  window.scrollTo(0, 0);
+
+}
   </script>
 </body>
 </html>
