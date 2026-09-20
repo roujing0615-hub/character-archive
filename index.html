@@ -1816,6 +1816,108 @@ margin-top: 18px;
   }
 
 }
+    /* ==================================================
+   角色歌｜CHARACTER SONG
+   ONLY ONE
+================================================== */
+
+.wanyan-page .song-section {
+  position: relative;
+
+  padding-top: 72px;
+  padding-bottom: 100px;
+
+  overflow: hidden;
+}
+
+
+/* ---------- 三層主視覺 ---------- */
+
+.wanyan-page .song-art {
+  position: relative;
+
+  width: 100%;
+  margin-top: 38px;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+}
+
+
+/* 背景 */
+
+.wanyan-page .song-art-bg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+
+/* 唱片 */
+
+.wanyan-page .song-art-vinyl {
+  position: absolute;
+
+  width: 57%;
+  height: auto;
+
+  right: -4%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 2;
+}
+
+
+/* 標準字 */
+
+.wanyan-page .song-art-title {
+  position: absolute;
+
+  width: 59%;
+  height: auto;
+
+  left: 5%;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 3;
+}
+
+
+/* ---------- 手機 ---------- */
+
+@media (max-width: 430px) {
+
+  .wanyan-page .song-section {
+    padding-top: 62px;
+    padding-bottom: 82px;
+  }
+
+  .wanyan-page .song-art {
+    margin-top: 32px;
+  }
+
+  .wanyan-page .song-art-vinyl {
+    width: 59%;
+    right: -5%;
+  }
+
+  .wanyan-page .song-art-title {
+    width: 61%;
+    left: 4%;
+  }
+
+}
 
 /* ==================================================
    綰胭｜WANYAN CSS
@@ -2538,7 +2640,38 @@ margin-top: 18px;
        CHARACTER SONG｜角色歌
   ================================================== -->
 
-  <!-- 角色歌完成後搬進這裡 -->
+<section class="character-section song-section" id="music">
+
+  <div class="section-number">04</div>
+  <h2 class="section-title">CHARACTER SONG</h2>
+  <div class="section-cn">角色歌</div>
+  <div class="section-line"></div>
+
+  <!-- ===== ONLY ONE｜角色歌主視覺 ===== -->
+
+  <div class="song-art">
+
+    <img
+      class="song-art-bg"
+      src="images/wanyan/song-bg.png"
+      alt=""
+    >
+
+    <img
+      class="song-art-vinyl"
+      src="images/wanyan/song-vinyl.png"
+      alt="角色歌唱片"
+    >
+
+    <img
+      class="song-art-title"
+      src="images/wanyan/song-title.png"
+      alt="13號靜謐"
+    >
+
+  </div>
+
+</section>
 
 
 </section>
