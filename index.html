@@ -1827,7 +1827,7 @@ margin-top: 18px;
   padding-top: 72px;
   padding-bottom: 100px;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 
@@ -1920,8 +1920,125 @@ margin-top: 18px;
   left: auto;
 }
 
+/* ==================================================
+   MUSIC PLAYER
+================================================== */
+
+.wanyan-page .song-player {
+  width: 86%;
+  margin: 30px auto 0;
 }
 
+
+/* ---------- 播放按鈕 ---------- */
+
+.wanyan-page .song-play-button {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 15px 4px;
+
+  background: transparent;
+  border: 0;
+
+  border-top:
+    1px solid rgba(111, 82, 116, 0.22);
+
+  border-bottom:
+    1px solid rgba(111, 82, 116, 0.22);
+
+  color: #4c3b50;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+
+/* ▶ */
+
+.wanyan-page .song-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  margin-right: 15px;
+
+  border:
+    1px solid rgba(142, 105, 113, 0.48);
+
+  border-radius: 50%;
+
+  font-size: 9px;
+
+  color: #745a78;
+}
+
+
+/* 文字 */
+
+.wanyan-page .song-play-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.wanyan-page .song-play-main {
+  font-family: Georgia, serif;
+
+  font-size: 8px;
+  letter-spacing: 0.25em;
+
+  color: #59455d;
+}
+
+.wanyan-page .song-play-sub {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+
+  color: rgba(74, 57, 78, 0.58);
+}
+
+
+/* ---------- 收起狀態 ---------- */
+
+.wanyan-page .song-player-reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+
+  transition:
+    grid-template-rows 0.45s ease;
+}
+
+.wanyan-page .song-player-frame {
+  overflow: hidden;
+}
+
+
+/* ---------- 展開 ---------- */
+
+.wanyan-page .song-player-reveal.open {
+  grid-template-rows: 1fr;
+}
+
+.wanyan-page .song-player-frame iframe {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  margin-top: 18px;
+
+  border: 0;
+}
 /* ==================================================
    綰胭｜WANYAN CSS
    END
@@ -2673,6 +2790,40 @@ margin-top: 18px;
     >
 
   </div>
+  <!-- ===== MUSIC PLAYER｜音樂播放器 ===== -->
+
+<div class="song-player">
+
+  <button
+    class="song-play-button"
+    type="button"
+    onclick="toggleSongPlayer()"
+    aria-expanded="false"
+    id="song-play-button"
+  >
+    <span class="song-play-icon">▶</span>
+
+    <span class="song-play-text">
+      <span class="song-play-main">LISTEN TO SONG</span>
+      <span class="song-play-sub">十三號靜謐 · 綰胭角色曲</span>
+    </span>
+  </button>
+
+  <div class="song-player-reveal" id="song-player-reveal">
+
+    <div class="song-player-frame">
+      <iframe
+        src="https://www.youtube.com/embed/wDDYNPl_s64"
+        title="《十三號靜謐》綰胭角色曲"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
+</div>
 
 </section>
 
@@ -2749,6 +2900,21 @@ function openWanyan() {
     isOpen
   );
 
+    }
+    function toggleSongPlayer() {
+  const player =
+    document.getElementById("song-player-reveal");
+
+  const button =
+    document.getElementById("song-play-button");
+
+  const isOpen =
+    player.classList.toggle("open");
+
+  button.setAttribute(
+    "aria-expanded",
+    isOpen
+  );
     }
   </script>
 </body>
