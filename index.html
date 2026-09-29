@@ -2007,6 +2007,817 @@ margin-top: 18px;
    綰胭｜WANYAN CSS
    END
 ================================================== */
+  /* ==================================================
+   漪泠｜YILING
+   冥界引路人
+   幽藍 × 墨黑 × 暗紅 × 銀灰
+================================================== */
+
+
+/* ---------- 漪泠整頁 ---------- */
+
+.yiling-page {
+  display: none;
+
+  position: relative;
+
+  background-color: #10121a;
+  background-image: url("images/yiling/yiling-background.png");
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 100% auto;
+
+  color: #e8e6ec;
+
+  overflow: hidden;
+}
+
+
+/* ---------- HERO ---------- */
+
+.yiling-page .yiling-hero {
+  position: relative;
+
+  width: 100%;
+  min-height: 100svh;
+
+  overflow: hidden;
+
+  background: #090b12;
+}
+
+
+.yiling-page .yiling-hero-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  z-index: 1;
+}
+
+
+/* HERO 暗部，讓文字能讀 */
+
+.yiling-page .yiling-hero-shade {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(6, 8, 15, 0.05) 20%,
+      rgba(6, 8, 15, 0.18) 52%,
+      rgba(6, 8, 15, 0.82) 100%
+    );
+}
+
+
+/* HERO 文字 */
+
+.yiling-page .yiling-hero-copy {
+  position: absolute;
+
+  left: 7%;
+  bottom: 10%;
+
+  z-index: 3;
+
+  max-width: 440px;
+}
+
+
+.yiling-page .yiling-hero-label {
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  letter-spacing: 4px;
+
+  color: #9bb8d9;
+
+  opacity: 0.88;
+}
+
+
+.yiling-page .yiling-hero-name {
+  margin: 0;
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: clamp(48px, 9vw, 78px);
+  font-weight: 300;
+  letter-spacing: 12px;
+
+  color: #f1edf2;
+
+  text-shadow:
+    0 0 20px rgba(91, 158, 220, 0.18);
+}
+
+
+.yiling-page .yiling-hero-role {
+  margin-top: 8px;
+
+  font-size: 12px;
+  letter-spacing: 5px;
+
+  color: #b7b0bb;
+}
+
+
+.yiling-page .yiling-hero-quote {
+  margin-top: 30px;
+
+  padding-left: 16px;
+
+  border-left: 1px solid rgba(114, 169, 219, 0.55);
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 14px;
+  line-height: 2;
+
+  letter-spacing: 2px;
+
+  color: rgba(239, 236, 242, 0.82);
+}
+
+
+/* SCROLL */
+
+.yiling-page .yiling-scroll-mark {
+  position: absolute;
+
+  right: 5%;
+  bottom: 9%;
+
+  z-index: 3;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 8px;
+  letter-spacing: 3px;
+
+  color: rgba(224, 229, 238, 0.55);
+
+  writing-mode: vertical-rl;
+}
+
+
+.yiling-page .yiling-scroll-mark span {
+  display: block;
+
+  width: 1px;
+  height: 48px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(116, 179, 231, 0.75),
+      transparent
+    );
+}
+
+
+/* ==================================================
+   共用章節標題
+================================================== */
+
+.yiling-page .yiling-section {
+  position: relative;
+
+  padding: 78px 7% 96px;
+
+  min-height: 620px;
+}
+
+
+.yiling-page .yiling-section-number {
+  margin-bottom: 7px;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  color: #759bc0;
+}
+
+
+.yiling-page .yiling-section-title {
+  margin: 0;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 25px;
+  font-weight: 400;
+
+  letter-spacing: 4px;
+
+  color: #e4e2e8;
+}
+
+
+.yiling-page .yiling-section-cn {
+  margin-top: 9px;
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 11px;
+  letter-spacing: 3px;
+
+  color: rgba(204, 200, 211, 0.58);
+}
+
+
+.yiling-page .yiling-section-line {
+  width: 46px;
+  height: 1px;
+
+  margin-top: 22px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #729fc9,
+      rgba(114, 159, 201, 0)
+    );
+}
+
+
+/* ==================================================
+   01｜BEFORE YOU FOLLOW HER
+================================================== */
+
+.yiling-page .yiling-lantern-block {
+  position: relative;
+
+  width: 88%;
+
+  margin: 52px auto 0;
+}
+
+
+.yiling-page .yiling-lantern-image {
+  display: block;
+
+  width: 72%;
+  height: auto;
+
+  margin-left: auto;
+
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.30);
+}
+
+
+.yiling-page .yiling-before-copy {
+  position: relative;
+
+  width: 72%;
+
+  margin-top: -55px;
+
+  padding: 26px 24px 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(12, 15, 25, 0.94),
+      rgba(21, 24, 36, 0.88)
+    );
+
+  border-left: 1px solid rgba(104, 164, 219, 0.65);
+
+  z-index: 2;
+}
+
+
+.yiling-page .yiling-small-label {
+  margin-bottom: 16px;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: #799fc5;
+}
+
+
+.yiling-page .yiling-before-lead {
+  margin: 0 0 15px;
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 20px;
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  color: #f0edf2;
+}
+
+
+.yiling-page .yiling-before-text {
+  margin: 0;
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 13px;
+  line-height: 2.15;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(220, 216, 225, 0.72);
+}
+
+
+/* ==================================================
+   02｜CHARACTER FILE
+================================================== */
+
+.yiling-page .yiling-profile {
+  padding-top: 76px;
+}
+
+
+.yiling-page .yiling-file-layout {
+  position: relative;
+
+  width: 88%;
+
+  margin: 48px auto 0;
+
+  padding: 1px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(110, 165, 214, 0.55),
+      rgba(127, 49, 64, 0.25),
+      rgba(110, 165, 214, 0.08)
+    );
+}
+
+
+.yiling-page .yiling-file-layout::before {
+  content: "GUIDE ARCHIVE · YILING";
+
+  position: absolute;
+
+  top: -18px;
+  right: 4px;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 8px;
+  letter-spacing: 3px;
+
+  color: rgba(137, 174, 207, 0.58);
+}
+
+
+.yiling-page .yiling-file-image {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: #0c0e16;
+}
+
+
+.yiling-page .yiling-file-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 45%,
+      rgba(8, 10, 17, 0.75) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+.yiling-page .yiling-file-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.yiling-page .yiling-file-info {
+  position: relative;
+
+  padding: 34px 28px 36px;
+
+  background:
+    rgba(10, 12, 20, 0.92);
+}
+
+
+.yiling-page .yiling-file-label {
+  margin-bottom: 12px;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 9px;
+  letter-spacing: 4px;
+
+  color: #769fc5;
+}
+
+
+.yiling-page .yiling-file-name {
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 42px;
+  font-weight: 300;
+
+  letter-spacing: 10px;
+
+  color: #f0edf2;
+}
+
+
+.yiling-page .yiling-file-name-en {
+  margin-top: 4px;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 9px;
+  letter-spacing: 5px;
+
+  color: rgba(161, 181, 204, 0.60);
+}
+
+
+.yiling-page .yiling-file-role {
+  margin: 18px 0 28px;
+
+  padding-bottom: 22px;
+
+  border-bottom:
+    1px solid rgba(120, 151, 182, 0.20);
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 13px;
+  letter-spacing: 3px;
+
+  color: #b8b3bc;
+}
+
+
+/* FILE 資料列 */
+
+.yiling-page .yiling-file-row {
+  display: grid;
+
+  grid-template-columns: 92px 1fr;
+
+  gap: 18px;
+
+  padding: 13px 0;
+
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+.yiling-page .yiling-file-row span {
+  font-family: "Cinzel", serif;
+
+  font-size: 8px;
+  letter-spacing: 2px;
+
+  color: #718ead;
+}
+
+
+.yiling-page .yiling-file-row strong {
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  color: #ded9df;
+}
+
+
+.yiling-page .yiling-file-note {
+  margin: 26px 0 0;
+
+  padding-left: 15px;
+
+  border-left:
+    1px solid rgba(145, 50, 65, 0.65);
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 12px;
+  line-height: 2;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(214, 208, 216, 0.68);
+}
+
+
+/* ==================================================
+   03｜BEFORE YILING
+   許璃焰
+================================================== */
+
+.yiling-page .yiling-past {
+  padding-bottom: 120px;
+}
+
+
+.yiling-page .yiling-past-visual {
+  position: relative;
+
+  width: 88%;
+
+  margin: 50px auto 0;
+
+  overflow: hidden;
+
+  background: #261715;
+
+  box-shadow:
+    0 24px 52px rgba(0, 0, 0, 0.30);
+}
+
+
+.yiling-page .yiling-past-visual img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+
+.yiling-page .yiling-past-visual::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(23, 11, 12, 0.02) 30%,
+      rgba(23, 11, 12, 0.25) 58%,
+      rgba(18, 9, 12, 0.92) 100%
+    );
+
+  pointer-events: none;
+}
+
+
+.yiling-page .yiling-past-copy {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 2;
+
+  padding: 36px 30px 32px;
+}
+
+
+.yiling-page .yiling-past-label {
+  margin-bottom: 12px;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 8px;
+  letter-spacing: 3px;
+
+  color: #c69b8d;
+}
+
+
+.yiling-page .yiling-past-name {
+  margin: 0;
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 35px;
+  font-weight: 300;
+
+  letter-spacing: 8px;
+
+  color: #f2e9e6;
+}
+
+
+.yiling-page .yiling-past-name-en {
+  margin-top: 6px;
+  margin-bottom: 20px;
+
+  font-family: "Cinzel", serif;
+
+  font-size: 8px;
+  letter-spacing: 4px;
+
+  color: rgba(218, 177, 163, 0.62);
+}
+
+
+.yiling-page .yiling-past-copy p {
+  max-width: 430px;
+
+  margin: 7px 0 0;
+
+  font-family: "Noto Serif TC", serif;
+
+  font-size: 12px;
+  line-height: 1.9;
+
+  letter-spacing: 1.5px;
+
+  color: rgba(240, 227, 224, 0.76);
+}
+
+
+/* ==================================================
+   手機版
+================================================== */
+
+@media (max-width: 430px) {
+
+  .yiling-page .yiling-hero {
+    min-height: 100svh;
+  }
+
+
+  .yiling-page .yiling-hero-image {
+    object-position: 52% center;
+  }
+
+
+  .yiling-page .yiling-hero-copy {
+    left: 7%;
+    right: 12%;
+    bottom: 9%;
+  }
+
+
+  .yiling-page .yiling-hero-name {
+    font-size: 50px;
+    letter-spacing: 9px;
+  }
+
+
+  .yiling-page .yiling-hero-label {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+
+  .yiling-page .yiling-hero-role {
+    font-size: 10px;
+    letter-spacing: 4px;
+  }
+
+
+  .yiling-page .yiling-hero-quote {
+    margin-top: 22px;
+
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+
+  /* 章節 */
+
+  .yiling-page .yiling-section {
+    padding:
+      66px
+      7%
+      82px;
+
+    min-height: 0;
+  }
+
+
+  .yiling-page .yiling-section-title {
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+
+  /* BEFORE */
+
+  .yiling-page .yiling-lantern-block {
+    width: 94%;
+
+    margin-top: 42px;
+  }
+
+
+  .yiling-page .yiling-lantern-image {
+    width: 86%;
+  }
+
+
+  .yiling-page .yiling-before-copy {
+    width: 82%;
+
+    margin-top: -36px;
+
+    padding: 23px 20px 25px;
+  }
+
+
+  .yiling-page .yiling-before-lead {
+    font-size: 18px;
+  }
+
+
+  .yiling-page .yiling-before-text {
+    font-size: 12px;
+  }
+
+
+  /* FILE */
+
+  .yiling-page .yiling-file-layout {
+    width: 94%;
+
+    margin-top: 44px;
+  }
+
+
+  .yiling-page .yiling-file-image {
+    aspect-ratio: 4 / 3;
+  }
+
+
+  .yiling-page .yiling-file-info {
+    padding: 30px 22px 32px;
+  }
+
+
+  .yiling-page .yiling-file-name {
+    font-size: 37px;
+    letter-spacing: 8px;
+  }
+
+
+  .yiling-page .yiling-file-row {
+    grid-template-columns: 82px 1fr;
+  }
+
+
+  /* 許璃焰 */
+
+  .yiling-page .yiling-past-visual {
+    width: 94%;
+
+    margin-top: 44px;
+  }
+
+
+  .yiling-page .yiling-past-copy {
+    padding: 55px 22px 25px;
+  }
+
+
+  .yiling-page .yiling-past-name {
+    font-size: 31px;
+    letter-spacing: 7px;
+  }
+
+    }
 
   </style>
 </head>
@@ -2793,7 +3604,251 @@ margin-top: 18px;
      十三號當舖
      END
 ================================================== -->
+<!-- ==================================================
+     漪泠｜YILING
+================================================== -->
 
+<section class="character-page yiling-page" id="yiling">
+
+  <!-- ===== HERO｜角色首頁 ===== -->
+  <section class="yiling-hero" id="yiling-hero">
+
+    <img
+      class="yiling-hero-image"
+      src="images/yiling/yiling-hero.png"
+      alt="漪泠"
+    >
+
+    <div class="yiling-hero-shade"></div>
+
+    <div class="yiling-hero-copy">
+      <div class="yiling-hero-label">GUIDE OF THE DEAD</div>
+
+      <h1 class="yiling-hero-name">漪泠</h1>
+
+      <div class="yiling-hero-role">冥界引路人</div>
+
+      <p class="yiling-hero-quote">
+        有些執念，<br>
+        並不會因死亡而消失。
+      </p>
+    </div>
+
+    <div class="yiling-scroll-mark">
+      SCROLL
+      <span></span>
+    </div>
+
+  </section>
+
+
+  <!-- ===== 01｜BEFORE YOU FOLLOW HER ===== -->
+  <section class="yiling-section yiling-before" id="yiling-before">
+
+    <div class="yiling-section-number">01</div>
+
+    <h2 class="yiling-section-title">
+      BEFORE YOU FOLLOW HER
+    </h2>
+
+    <div class="yiling-section-cn">
+      在跟上她以前
+    </div>
+
+    <div class="yiling-section-line"></div>
+
+
+    <div class="yiling-lantern-block">
+
+      <img
+        class="yiling-lantern-image"
+        src="images/yiling/yiling-guide-lantern.png"
+        alt="漪泠的引路古燈"
+      >
+
+      <div class="yiling-before-copy">
+
+        <div class="yiling-small-label">
+          BEFORE YOU FOLLOW
+        </div>
+
+        <p class="yiling-before-lead">
+          「別跟得太近。」
+        </p>
+
+        <p class="yiling-before-text">
+          她提著燈走在前面，很少回頭。
+          幽藍的火不為活人照路，
+          也從不替亡者決定該往哪裡去。
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== 02｜CHARACTER FILE ===== -->
+  <section class="yiling-section yiling-profile" id="yiling-profile">
+
+    <div class="yiling-section-number">02</div>
+
+    <h2 class="yiling-section-title">
+      CHARACTER FILE
+    </h2>
+
+    <div class="yiling-section-cn">
+      人物檔案
+    </div>
+
+    <div class="yiling-section-line"></div>
+
+
+    <div class="yiling-file-layout">
+
+      <div class="yiling-file-image">
+
+        <img
+          src="images/yiling/yiling-file-mask.png"
+          alt="引路人的面具"
+        >
+
+      </div>
+
+
+      <div class="yiling-file-info">
+
+        <div class="yiling-file-label">
+          GUIDE RECORD · 01
+        </div>
+
+        <div class="yiling-file-name">
+          漪泠
+        </div>
+
+        <div class="yiling-file-name-en">
+          YILING
+        </div>
+
+        <div class="yiling-file-role">
+          冥界引路人
+        </div>
+
+
+        <div class="yiling-file-row">
+
+          <span>IDENTITY</span>
+
+          <strong>
+            引路人
+          </strong>
+
+        </div>
+
+
+        <div class="yiling-file-row">
+
+          <span>LANTERN</span>
+
+          <strong>
+            幽藍古燈
+          </strong>
+
+        </div>
+
+
+        <div class="yiling-file-row">
+
+          <span>ABILITY</span>
+
+          <strong>
+            執念之火
+          </strong>
+
+        </div>
+
+
+        <p class="yiling-file-note">
+          火焰燃燒的是記憶與執念，
+          而非肉身。
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== 03｜BEFORE YILING ===== -->
+  <section class="yiling-section yiling-past" id="yiling-past">
+
+    <div class="yiling-section-number">03</div>
+
+    <h2 class="yiling-section-title">
+      BEFORE YILING
+    </h2>
+
+    <div class="yiling-section-cn">
+      在「漪泠」以前
+    </div>
+
+    <div class="yiling-section-line"></div>
+
+
+    <div class="yiling-past-visual">
+
+      <img
+        src="images/yiling/yiling-xu-liyan.png"
+        alt="許璃焰"
+      >
+
+      <div class="yiling-past-copy">
+
+        <div class="yiling-past-label">
+          BEFORE SHE BECAME THE GUIDE
+        </div>
+
+        <h3 class="yiling-past-name">
+          許璃焰
+        </h3>
+
+        <div class="yiling-past-name-en">
+          XU LIYAN
+        </div>
+
+        <p>
+          在成為引路人以前，
+          她曾經活在人間。
+        </p>
+
+        <p>
+          那時，她有另一個名字。
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===== FUTURE CONTENT｜未來擴充區 ===== -->
+
+  <!--
+    之後若要增加：
+    HER STORY
+    MEMORY
+    CHARACTER SONG
+    GALLERY
+
+    全部從這裡往下接。
+    現在先不施工。
+  -->
+
+
+</section>
 
   <!-- ==================================================
        頁面切換｜PAGE SWITCH
@@ -2842,6 +3897,15 @@ function openWanyan() {
   window.scrollTo(0, 0);
 
 }
+    function openYiling() {
+  document.getElementById("cover-page").style.display = "none";
+  document.getElementById("world-page").style.display = "none";
+  document.getElementById("wanyan").style.display = "none";
+
+  document.getElementById("yiling").style.display = "block";
+
+  window.scrollTo(0, 0);
+    }
     function toggleAbout() {
 
   const about =
